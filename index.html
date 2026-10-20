@@ -76,7 +76,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-6 text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
-                <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952</span>
+                <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952 | +39 031 687 7590</span>
             </div>
             
             <!-- SEZIONE OBBLIGATORIA DIREZIONE SANITARIA (Top Right) -->
@@ -98,12 +98,14 @@
                 <img src="logo parasanitis.png" alt="Poliambulatorio Medico Parasanitis" class="h-12 w-auto object-contain">
             </a>
 
-            <nav class="hidden md:flex items-center gap-7 font-medium text-sm text-slate-700">
-                <a href="#home" class="hover:text-navy-900 transition-colors font-semibold text-navy-900">Home</a>
-                <a href="#specialisti" class="hover:text-navy-900 transition-colors">Specialisti</a>
-                <a href="#welfare" class="hover:text-navy-900 transition-colors">Welfare Aziendale</a>
-                <a href="#medicina-lavoro" class="hover:text-navy-900 transition-colors">Medicina del Lavoro</a>
-                <a href="#contatti" class="hover:text-navy-900 transition-colors">Contatti</a>
+            <nav class="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm text-slate-700">
+                <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
+                <a href="#specialisti" class="hover:text-navy-900">Specialisti</a>
+                <a href="#checkup" class="hover:text-navy-900">Check Up</a>
+                <a href="#convenzioni" class="hover:text-navy-900">Convenzioni</a>
+                <a href="#welfare" class="hover:text-navy-900">Welfare</a>
+                <a href="#medicina-lavoro" class="hover:text-navy-900">Medicina Lavoro</a>
+                <a href="#contatti" class="hover:text-navy-900">Contatti</a>
             </nav>
 
             <div class="hidden sm:flex items-center gap-3">
@@ -121,6 +123,8 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
             <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialisti & Medici</a>
+            <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Check Up</a>
+            <a href="#convenzioni" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Convenzioni Assicurative</a>
             <a href="#welfare" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Welfare Aziendale</a>
             <a href="#medicina-lavoro" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Medicina del Lavoro</a>
             <a href="#contatti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Contatti</a>
@@ -163,7 +167,43 @@
         </div>
     </section>
 
-    <!-- ÉQUIPE MEDICA COMPLETA CON SCHEDE, LAUREA E PRENOTAZIONE ALFADOCS -->
+    <!-- SEZIONE CHECK UP -->
+    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto border-b border-slate-200">
+        <div class="bg-gradient-to-r from-navy-900 to-navy-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevenzione e Cura Multidisciplinare</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prenota Il Tuo Check Up</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Il nostro team di specialisti lavora in modo multidisciplinare proprio per prendersi cura di te rispettando i tuoi bisogni e i tuoi obiettivi di salute.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="heart-pulse" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Angiologia</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="scan" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Ecografie</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="test-tube-2" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Analisi Cliniche</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Raccontaci il tuo bisogno</h3>
+                    <p class="text-xs text-slate-500 mb-6">Ti ascolteremo e ti aiuteremo subito con appuntamenti in poco tempo.</p>
+                    <a href="#contatti" class="w-full py-4 rounded-xl bg-medical-accent hover:bg-navy-900 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
+                        Prenota Ora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÉQUIPE MEDICA COMPLETA -->
     <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica Specialistica</span>
@@ -173,16 +213,12 @@
             </p>
         </div>
 
-        <!-- Sezione Risultati Ricerca -->
         <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
             <!-- 1. Dott. Stefano Sala (Direttore Sanitario) -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-4">
-                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">
-                            SS
-                        </div>
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">SS</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Direttore Sanitario</span>
                             <h3 class="font-heading text-lg font-bold text-navy-900">Dott. Stefano Sala</h3>
@@ -249,180 +285,84 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- 4. Dott.ssa Valeria Rocca -->
-            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
-                <div class="p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">VR</div>
-                        <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ortopedia</span>
-                            <h3 class="font-heading text-lg font-bold text-navy-900">Dott.ssa Valeria Rocca</h3>
-                            <p class="text-xs text-slate-500 font-medium">Ortopedico</p>
-                            <span class="text-[11px] text-slate-400 block mt-0.5">Laurea in Medicina e Chirurgia</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Specializzata nelle patologie articolari, ortopedia generale e percorsi conservativi post-traumatici.
-                    </p>
-                </div>
-                <div class="p-4 bg-slate-50 border-t border-slate-100">
-                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
-                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
-                        <span>Prenota la tua visita con la Dottoressa</span>
-                    </a>
-                </div>
+    <!-- SEZIONE CONVENZIONI ASSICURATIVE -->
+    <section id="convenzioni" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Assicurazioni & Fund Sanitari</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Le Nostre Convenzioni</h2>
+                <p class="text-slate-600 text-sm">
+                    Il Poliambulatorio Parasanitis è convenzionato con le principali assicurazioni e network sanitari nazionali:
+                </p>
             </div>
 
-            <!-- 5. Équipe Neurochirurgia -->
-            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
-                <div class="p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">NC</div>
-                        <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Neurochirurgia</span>
-                            <h3 class="font-heading text-lg font-bold text-navy-900">Specialisti Neurochirurghi</h3>
-                            <p class="text-xs text-slate-500 font-medium">Neurochirurgia della Colonna</p>
-                            <span class="text-[11px] text-slate-400 block mt-0.5">Équipe Medico-Chirurgica</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Valutazione e trattamento specialistico di ernie del disco, sciatalgie e patologie della colonna vertebrale.
-                    </p>
-                </div>
-                <div class="p-4 bg-slate-50 border-t border-slate-100">
-                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
-                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
-                        <span>Prenota la tua visita con il Dottore</span>
-                    </a>
-                </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10">
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Blue Assistance</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Insalute</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">RB Care</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Assirete</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Allianz Health</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Salutissima</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Axa</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">My Assistance</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Cooperazione Salute</div>
+                <div class="p-5 bg-white rounded-2xl border border-slate-200 text-center font-bold text-navy-900 text-sm shadow-sm flex items-center justify-center">Salute Semplice</div>
             </div>
 
-            <!-- 6. Matteo Francesco Cazzaniga -->
-            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
-                <div class="p-6">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">MC</div>
-                        <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Osteopatia & Massoterapia</span>
-                            <h3 class="font-heading text-lg font-bold text-navy-900">Matteo F. Cazzaniga</h3>
-                            <p class="text-xs text-slate-500 font-medium">Massoterapista MCB e Osteopata</p>
-                            <span class="text-[11px] text-slate-400 block mt-0.5">Diploma Osteopatia & Abilitazione MCB</span>
-                        </div>
-                    </div>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        Riequilibrio posturale, manipolazioni osteopatiche e terapie manuali per il benessere muscolo-scheletrico.
-                    </p>
-                </div>
-                <div class="p-4 bg-slate-50 border-t border-slate-100">
-                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
-                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
-                        <span>Prenota la tua visita con il Terapista</span>
-                    </a>
-                </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center max-w-2xl mx-auto shadow-sm">
+                <p class="text-xs text-slate-600 mb-2 font-medium">Sei un'azienda o un fondo sanitario e vuoi richiedere un accordo di convenzione?</p>
+                <a href="mailto:convenzioni@parasanitis.it" class="text-navy-900 font-bold text-sm hover:underline flex items-center justify-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4 text-medical-accent"></i>
+                    <span>convenzioni@parasanitis.it</span>
+                </a>
             </div>
-
         </div>
     </section>
 
     <!-- PAGINA WELFARE AZIENDALE -->
-    <section id="welfare" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-6">
-                    <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi per i Lavoratori</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                        Welfare Aziendale Parasanitis
-                    </h2>
-                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-                        Il <strong>Welfare Aziendale</strong> consente ai lavoratori dipendenti di utilizzare il credito welfare erogato dalla propria azienda per accedere a visite specialistiche, esami diagnostici e percorsi di fisioterapia presso il Poliambulatorio Parasanitis.
-                    </p>
-                    <h4 class="font-bold text-navy-900 text-sm mb-2">Perché utilizzarlo presso di noi?</h4>
-                    <ul class="space-y-3 text-xs sm:text-sm text-slate-600 mb-6">
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
-                            <span>Accesso diretto a oltre 25 specializzazioni mediche e diagnostica.</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
-                            <span>Nessun anticipo di denaro tramite i principali portali welfare.</span>
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
-                            <span>Estensione dei voucher anche per i familiari a carico.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="lg:col-span-6 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-6">Piattaforme Welfare Convenzionate</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Edenred</div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Easy Welfare</div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Pellegrini Welfare</div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">TreCuori</div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">DoubleYou</div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Altre Convenzioni</div>
-                    </div>
-                </div>
+    <section id="welfare" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi per i Lavoratori</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">Welfare Aziendale Parasanitis</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                    Utilizza il tuo credito welfare aziendale per accedere a visite specialistiche, diagnostica ed esami senza anticipi di denaro.
+                </p>
+            </div>
+            <div class="lg:col-span-6 bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Piattaforme Welfare</h3>
+                <p class="text-xs text-slate-600 mb-4">Accettiamo i principali portali welfare: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou e molti altri.</p>
             </div>
         </div>
     </section>
 
     <!-- PAGINA MEDICINA DEL LAVORO -->
-    <section id="medicina-lavoro" class="py-20 px-6 max-w-7xl mx-auto">
+    <section id="medicina-lavoro" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi B2B per le Imprese</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Medicina del Lavoro per le Aziende</h2>
-            <p class="text-slate-600 text-sm">
-                Supportiamo le imprese del territorio nell'adempimento degli obblighi di legge (D.Lgs. 81/08) e nella tutela della salute dei lavoratori.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <i data-lucide="briefcase" class="w-8 h-8 text-navy-900 mb-4"></i>
-                <h3 class="font-heading text-lg font-bold text-navy-900 mb-2">Sorveglianza Sanitaria</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                    Nomina del Medico Competente, stesura del piano sanitario e gestione delle scadenze periodiche aziendali.
-                </p>
-            </div>
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <i data-lucide="user-check" class="w-8 h-8 text-navy-900 mb-4"></i>
-                <h3 class="font-heading text-lg font-bold text-navy-900 mb-2">Visite di Idoneità</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                    Visite mediche preventive e periodiche per l'idoneità alla mansione specifica direttamente in struttura.
-                </p>
-            </div>
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                <i data-lucide="activity" class="w-8 h-8 text-navy-900 mb-4"></i>
-                <h3 class="font-heading text-lg font-bold text-navy-900 mb-2">Esami e Accertamenti</h3>
-                <p class="text-xs text-slate-600 leading-relaxed">
-                    Esami ematochimici con punto prelievi dedicato, spirometrie, audiometrie e drug test in sede.
-                </p>
-            </div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Medicina del Lavoro</h2>
+            <p class="text-slate-600 text-sm">Sorveglianza Sanitaria, Medico Competente e Visite di Idoneità ai sensi del D.Lgs. 81/08.</p>
         </div>
     </section>
 
-    <!-- PAGINA CONTATTI -->
+    <!-- CONTATTI -->
     <section id="contatti" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
         <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div class="lg:col-span-5">
-                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Poliambulatorio Parasanitis</span>
-                    <h2 class="font-heading text-3xl font-bold mb-6">Contatti e Sede</h2>
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Hai bisogno dei nostri servizi?</span>
+                    <h2 class="font-heading text-3xl font-bold mb-4">Sentiti libero di contattarci</h2>
                     <div class="space-y-4 text-sm text-slate-200">
                         <div class="flex items-center gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-medical-light"></i>
-                            <span>Via Sant'Agostino 57, 23892 Bulciago (LC)</span>
-                        </div>
-                        <div class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-5 h-5 text-medical-light"></i>
-                            <a href="tel:+393755506952" class="hover:text-medical-light">+39 375 550 6952</a>
+                            <span>+39 375 550 6952 | +39 031 687 7590</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="clock" class="w-5 h-5 text-medical-light"></i>
-                            <span>Lun - Ven: 08:00 - 21:00 | Sab: 08:00 - 12:00</span>
+                            <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
+                            <span>info@parasanitis.it</span>
                         </div>
                     </div>
                 </div>
@@ -442,15 +382,28 @@
         </div>
     </section>
 
-    <!-- WIDGET WHATSAPP FISSO IN BASSO A DESTRA SU OGNI PAGINA -->
+    <!-- WIDGET WHATSAPP FISSO -->
     <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float" aria-label="Contatta la segreteria su WhatsApp">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
-    <!-- Footer -->
-    <footer class="bg-navy-950 text-slate-400 py-8 px-6 text-xs text-center border-t border-navy-800">
-        <p>© 2026 Poliambulatorio Parasanitis S.r.l. - Via Sant'Agostino 57, Bulciago (LC)</p>
-        <p class="mt-1 text-slate-500">Direttore Sanitario: Dott. Stefano Sala (Pneumologo e Allergologo)</p>
+    <!-- FOOTER UFFICIALE CON DATI SOCIETARI OBBLIGATORI -->
+    <footer class="bg-navy-950 text-slate-400 py-12 px-6 text-xs border-t border-navy-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <strong class="text-white text-sm block mb-1">Parasanitis S.r.l.</strong>
+                <p>P.IVA 03826210134 | Direttore Sanitario: Dott. Stefano Sala</p>
+                <p class="text-slate-500 mt-1">REA: LC - 327398 | Cap. Sociale: € 25.000,00 | PEC: parasanitis@legalmail.it</p>
+            </div>
+            <div class="text-slate-500 text-center md:text-right">
+                <p>Copyrights © 2026 PARASANITIS S.R.L. | Tutti i diritti riservati.</p>
+                <div class="flex gap-4 justify-center md:justify-end mt-2">
+                    <a href="#" class="hover:underline">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#" class="hover:underline">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
