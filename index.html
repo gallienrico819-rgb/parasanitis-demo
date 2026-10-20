@@ -128,6 +128,10 @@
                     <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
                     <span>Prenota Online AlfaDocs</span>
                 </a>
+                <!-- Tasto per passare all'Inglese -->
+                <a href="./en/" class="px-3 py-2.5 rounded-full border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5 shadow-sm">
+                    <span>🇬🇧 EN</span>
+                </a>
             </div>
 
             <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700">
@@ -146,10 +150,13 @@
             <a href="https://alfadocs.it" target="_blank" class="text-center py-3 bg-navy-900 text-white rounded-xl text-xs font-bold">
                 Prenota Online AlfaDocs
             </a>
+            <a href="./en/" class="text-center py-2.5 border border-slate-200 rounded-xl text-xs font-bold text-slate-700">
+                🇬🇧 English Version
+            </a>
         </div>
     </header>
 
-    <!-- HERO SECTION WITH OFFICIAL SLOGAN -->
+    <!-- HERO SECTION -->
     <section id="home" class="relative py-20 md:py-32 bg-hero-overlay text-white shadow-inner">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
@@ -905,7 +912,6 @@
             }
         }
 
-        // Script running numbers
         const counters = document.querySelectorAll('.counter');
         let animated = false;
 
