@@ -64,14 +64,15 @@
             transform: scale(1.1);
             background-color: #20ba5a;
         }
+        /* IMMAGINI DI SFONDO MEDICHE IN PRIMO PIANO (STILE RIFERIMENTO PULITO) */
         .bg-hero-overlay {
-            background: radial-gradient(circle at top right, rgba(43, 130, 201, 0.3), transparent 60%), linear-gradient(135deg, #0f2b5c 0%, #0a1a38 100%);
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.88) 0%, rgba(10, 26, 56, 0.92) 100%), url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
         }
         .bg-facility-overlay {
-            background: radial-gradient(circle at bottom left, rgba(104, 166, 224, 0.25), transparent 70%), linear-gradient(135deg, #132847 0%, #0f2b5c 100%);
+            background: linear-gradient(to right, rgba(15, 43, 92, 0.92) 30%, rgba(15, 43, 92, 0.80) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
         }
         .bg-checkup-overlay {
-            background: radial-gradient(circle at center, rgba(43, 130, 201, 0.35), transparent 70%), linear-gradient(135deg, #0a1a38 0%, #132847 100%);
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.90) 0%, rgba(43, 130, 201, 0.85) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
         }
     </style>
 </head>
@@ -181,11 +182,9 @@
         </div>
     </section>
 
-    <!-- SEZIONE CON NUMERI IN MOVIMENTO (RUNNING NUMBERS) -->
+    <!-- SEZIONE CON RUNNING NUMBERS -->
     <section class="py-16 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <!-- Box 1: Pazienti -->
             <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
                 <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
                     <i data-lucide="users" class="w-6 h-6"></i>
@@ -196,7 +195,6 @@
                 <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Pazienti</p>
             </div>
 
-            <!-- Box 2: Professionisti -->
             <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
                 <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
                     <i data-lucide="user-check" class="w-6 h-6"></i>
@@ -207,7 +205,6 @@
                 <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Professionisti</p>
             </div>
 
-            <!-- Box 3: Servizi -->
             <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
                 <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
                     <i data-lucide="stethoscope" class="w-6 h-6"></i>
@@ -217,7 +214,6 @@
                 </div>
                 <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Servizi</p>
             </div>
-
         </div>
     </section>
 
@@ -293,13 +289,13 @@
         </div>
     </section>
 
-    <!-- OFFICIAL DOCTORS LIST -->
+    <!-- OFFICIAL DOCTORS & BACK OFFICE LIST -->
     <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica Specialistica</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Specialisti</h2>
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica & Staff</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Specialisti e Staff</h2>
             <p class="text-slate-600 text-sm">
-                Presso il poliambulatorio Parasanitis di Bulciago potrai usufruire di un’ampia gamma di prestazioni specialistiche gestite da un’equipe qualificata ed esperta.
+                Presso il poliambulatorio Parasanitis di Bulciago potrai usufruire di un’ampia gamma di prestazioni specialistiche e di un supporto amministrativo dedicato.
             </p>
         </div>
 
@@ -755,14 +751,33 @@
                 </div>
             </div>
 
+            <!-- BACK OFFICE & ADMIN CARDS -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
-                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">BO</div>
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">ES</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Segreteria & Accoglienza</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Servizi Back Office</h3>
-                            <p class="text-xs text-slate-500 font-medium">Assistenza e Accoglienza Pazienti</p>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Back Office</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Erica Scerna</h3>
+                            <p class="text-xs text-slate-500 font-medium">Amministrazione</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-medical-light"></i><span>Contatta la Segreteria</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">VB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Back Office</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Valentina Botturi</h3>
+                            <p class="text-xs text-slate-500 font-medium">Front Office</p>
                         </div>
                     </div>
                 </div>
@@ -891,7 +906,7 @@
             }
         }
 
-        // Script per l'animazione dei numeri incrementali (Running Numbers)
+        // Script running numbers
         const counters = document.querySelectorAll('.counter');
         let animated = false;
 
@@ -899,7 +914,7 @@
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 let count = 0;
-                const speed = target / 50; // Velocità di conteggio
+                const speed = target / 50;
 
                 function updateCount() {
                     count += speed;
