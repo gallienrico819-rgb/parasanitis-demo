@@ -64,7 +64,6 @@
             transform: scale(1.1);
             background-color: #20ba5a;
         }
-        /* PURI GRADIENTI PROFESSIONALI: ZERO FOTO ESTERNE, ZERO LETTI D'OSPEDALE, ZERO SCRITTE */
         .bg-hero-overlay {
             background: radial-gradient(circle at top right, rgba(43, 130, 201, 0.3), transparent 60%), linear-gradient(135deg, #0f2b5c 0%, #0a1a38 100%);
         }
@@ -179,6 +178,46 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE CON NUMERI IN MOVIMENTO (RUNNING NUMBERS) -->
+    <section class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Box 1: Pazienti -->
+            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                </div>
+                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
+                    <span class="counter" data-target="4500">0</span>+
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Pazienti</p>
+            </div>
+
+            <!-- Box 2: Professionisti -->
+            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                </div>
+                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
+                    <span class="counter" data-target="32">0</span>
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Professionisti</p>
+            </div>
+
+            <!-- Box 3: Servizi -->
+            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                </div>
+                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
+                    <span class="counter" data-target="25">0</span>
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Servizi</p>
+            </div>
+
         </div>
     </section>
 
@@ -851,6 +890,38 @@
                 }
             }
         }
+
+        // Script per l'animazione dei numeri incrementali (Running Numbers)
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        function runCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 50; // Velocità di conteggio
+
+                function updateCount() {
+                    count += speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+                updateCount();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + window.innerHeight;
+            const targetPos = document.querySelector('.counter').getBoundingClientRect().top + window.scrollY;
+            if (!animated && scrollPos > targetPos) {
+                runCounters();
+                animated = true;
+            }
+        });
     </script>
 </body>
 </html>
