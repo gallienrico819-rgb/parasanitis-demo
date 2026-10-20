@@ -77,31 +77,38 @@
 </head>
 <body class="antialiased selection:bg-medical-accent selection:text-white">
 
-    <!-- Top Info Bar -->
+    <!-- Top Info Bar with English Switcher -->
     <div class="bg-navy-950 text-white text-xs py-2.5 px-6 border-b border-navy-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
             <div class="flex items-center gap-6 text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
                 <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952 | +39 031 687 7590</span>
                 
                 <div class="hidden sm:flex items-center gap-3 pl-4 border-l border-navy-800">
-                    <a href="https://wa.me/393755506952" target="_blank" class="text-emerald-400 hover:text-white transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+                    <a href="https://wa.me/393755506952" target="_blank" class="text-emerald-400 hover:text-white transition-colors" aria-label="WhatsApp"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
                     <span class="text-slate-600">|</span>
-                    <a href="https://facebook.com" target="_blank" class="text-medical-light hover:text-white transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="text-medical-light hover:text-white transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
                     <span class="text-slate-600">|</span>
-                    <a href="https://youtube.com" target="_blank" class="text-red-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                    <a href="https://youtube.com" target="_blank" class="text-red-400 hover:text-white transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
                     <span class="text-slate-600">|</span>
-                    <a href="https://instagram.com" target="_blank" class="text-pink-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="text-pink-400 hover:text-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
                 </div>
             </div>
             
-            <div class="flex items-center bg-navy-900 border border-medical-light/30 px-3.5 py-1 rounded-full text-right">
-                <i data-lucide="shield-check" class="w-4 h-4 text-medical-light mr-2 shrink-0"></i>
-                <div class="text-[11px]">
-                    <span class="text-slate-400 font-medium">Direttore Sanitario:</span> 
-                    <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong> 
-                    <span class="text-medical-light font-semibold ml-1">(Pneumologo e Allergologo)</span>
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center bg-navy-900 border border-medical-light/30 px-3.5 py-1 rounded-full text-right">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-medical-light mr-2 shrink-0"></i>
+                    <div class="text-[11px]">
+                        <span class="text-slate-400 font-medium">Direttore Sanitario:</span> 
+                        <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong> 
+                        <span class="text-medical-light font-semibold ml-1">(Pneumologo e Allergologo)</span>
+                    </div>
                 </div>
+
+                <!-- ENGLISH LANGUAGE TOGGLE BUTTON -->
+                <a href="./en/" class="bg-medical-accent hover:bg-medical-light text-white font-bold px-3.5 py-1.5 rounded-full text-xs flex items-center gap-1.5 transition-all shadow-md">
+                    <span>🇬🇧 EN</span>
+                </a>
             </div>
         </div>
     </div>
@@ -123,18 +130,17 @@
                 <a href="#contatti" class="hover:text-navy-900">Contatti</a>
             </nav>
 
-            <div class="hidden sm:flex items-center gap-3">
+            <div class="flex items-center gap-3">
                 <a href="https://alfadocs.it" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-bold bg-navy-900 hover:bg-navy-800 text-white transition-all shadow-md flex items-center gap-2">
                     <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
                     <span>Prenota Online AlfaDocs</span>
                 </a>
-                <!-- Tasto per passare all'Inglese -->
-                <a href="./en/" class="px-3 py-2.5 rounded-full border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5 shadow-sm">
+                <a href="./en/" class="md:hidden bg-medical-accent text-white font-bold px-3 py-2 rounded-xl text-xs flex items-center gap-1">
                     <span>🇬🇧 EN</span>
                 </a>
             </div>
 
-            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700">
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700" aria-label="Menu">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
@@ -156,7 +162,7 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION WITH OFFICIAL SLOGAN -->
     <section id="home" class="relative py-20 md:py-32 bg-hero-overlay text-white shadow-inner">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
@@ -170,7 +176,7 @@
             </h1>
 
             <p class="text-base sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-                Un’ampia gamma di prestazioni specialistiche con un’equipe qualificata ed esperta in costante collaborazione.
+                Un’ampia gamma di prestazioni specialistiche con un’equipe qualificata ed esperta in costante collaborazione interdisciplinare.
             </p>
 
             <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
@@ -188,7 +194,7 @@
         </div>
     </section>
 
-    <!-- SEZIONE CON RUNNING NUMBERS -->
+    <!-- RUNNING NUMBERS STATS -->
     <section class="py-16 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
@@ -228,26 +234,26 @@
         <div class="bg-facility-overlay rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
             <div class="max-w-3xl">
                 <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">I Nostri Spazi</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">Un Polo Sanitario Moderno e Avanzato</h2>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">Un Polo Sanitario Moderno e Avanzato a Bulciago</h2>
                 <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
-                    Grazie alla collaborazione costante tra i nostri specialisti riusciamo a confrontarci tempestivamente circa le diverse problematiche presentate.
+                    Grazie alla collaborazione costante tra i nostri specialisti riusciamo a confrontarci tempestivamente circa le diverse problematiche cliniche presentate dai pazienti, garantendo percorsi terapeutici mirati e integrati.
                 </p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
                     <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
                         <span class="font-heading text-3xl font-extrabold text-medical-light block mb-1">9</span>
                         <h4 class="font-bold text-sm text-white mb-1">Ambulatori Medici</h4>
-                        <p class="text-xs text-slate-300">Spazi attrezzati per visite ed ecografie.</p>
+                        <p class="text-xs text-slate-300">Spazi altamente attrezzati per visite specialistiche ed ecografie.</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
                         <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light mb-2"></i>
                         <h4 class="font-bold text-sm text-white mb-1">Palestra Fisioterapica</h4>
-                        <p class="text-xs text-slate-300">Area rieducazione motoria e funzionale.</p>
+                        <p class="text-xs text-slate-300">Area dedicata alla rieducazione motoria e funzionale.</p>
                     </div>
                     <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
                         <i data-lucide="brain" class="w-8 h-8 text-medical-light mb-2"></i>
                         <h4 class="font-bold text-sm text-white mb-1">Area Psicologia</h4>
-                        <p class="text-xs text-slate-300">Studi per percorsi di supporto e sessuologia.</p>
+                        <p class="text-xs text-slate-300">Studi riservati per percorsi di supporto e sessuologia.</p>
                     </div>
                 </div>
 
@@ -265,9 +271,9 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7">
                     <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevenzione e Cura</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prenota Il Tuo Check Up</h2>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prenota Il Tuo Check Up Personalizzato</h2>
                     <p class="text-slate-200 text-sm leading-relaxed mb-6">
-                        Il nostro team lavora in modo multidisciplinare per prendersi cura di te rispettando i tuoi bisogni e i tuoi obiettivi di salute.
+                        Il nostro team lavora in modo multidisciplinare per prendersi cura di te rispettando i tuoi bisogni clinici e i tuoi obiettivi di benessere e salute a lungo termine.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                         <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
@@ -286,7 +292,7 @@
                 </div>
                 <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
                     <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Raccontaci il tuo bisogno</h3>
-                    <p class="text-xs text-slate-500 mb-6">Ti ascolteremo e ti aiuteremo subito con appuntamenti in poco tempo.</p>
+                    <p class="text-xs text-slate-500 mb-6">Ti ascolteremo con attenzione e ti aiuteremo subito con appuntamenti in tempi rapidi.</p>
                     <a href="#contatti" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
                         Prenota Ora
                     </a>
@@ -295,18 +301,19 @@
         </div>
     </section>
 
-    <!-- OFFICIAL DOCTORS & BACK OFFICE LIST -->
+    <!-- OFFICIAL DOCTORS & BACK OFFICE LIST (FULLY EXPANDED) -->
     <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica & Staff</span>
             <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Specialisti e Staff</h2>
             <p class="text-slate-600 text-sm">
-                Presso il poliambulatorio Parasanitis di Bulciago potrai usufruire di un’ampia gamma di prestazioni specialistiche e di un supporto amministrativo dedicato.
+                Presso il poliambulatorio Parasanitis di Bulciago potrai usufruire di un’ampia gamma di prestazioni specialistiche e di un supporto amministrativo e di segreteria altamente dedicato.
             </p>
         </div>
 
         <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+            <!-- 1. Dott. Stefano Sala -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -317,6 +324,7 @@
                             <p class="text-xs text-slate-500 font-medium">Pneumologo e Allergologo</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specializzato nella diagnosi e trattamento delle patologie respiratorie, asma, allergie e problematiche polmonari avanzate.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -325,6 +333,7 @@
                 </div>
             </div>
 
+            <!-- 2. Dott.ssa Margherita Barbera -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -335,6 +344,7 @@
                             <p class="text-xs text-slate-500 font-medium">Ostetrica e Consulente Sessuale</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Assistenza alla maternità, cicli di accompagnamento alla nascita, riabilitazione del pavimento pelvico e consulenze di sessuologia clinica.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -343,6 +353,7 @@
                 </div>
             </div>
 
+            <!-- 3. Dott.ssa Manuela Beccalli -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -353,6 +364,7 @@
                             <p class="text-xs text-slate-500 font-medium">Podologa</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Trattamento di patologie del piede, valutazioni biomeccaniche, cura delle unghie incarnite e prevenzione del piede diabetico.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -361,6 +373,7 @@
                 </div>
             </div>
 
+            <!-- 4. Dott.ssa Daniela Benez Ferreira -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -371,6 +384,7 @@
                             <p class="text-xs text-slate-500 font-medium">Psicologa</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Percorsi di supporto psicologico individuale, gestione dell'ansia, dello stress e sostegno alla crescita personale.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -379,6 +393,7 @@
                 </div>
             </div>
 
+            <!-- 5. Dott.ssa Carin Irma Blumenthal -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -389,6 +404,7 @@
                             <p class="text-xs text-slate-500 font-medium">Psicologa e Sessuologa Clinica</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Consulenza psicologica e sessuologica clinica per singoli e coppie volto al superamento di blocchi emotivi e relazionali.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -397,6 +413,7 @@
                 </div>
             </div>
 
+            <!-- 6. Dott.ssa Alice Boaretto -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -407,6 +424,7 @@
                             <p class="text-xs text-slate-500 font-medium">Dietista</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Elaborazione di piani nutrizionali personalizzati, educazione alimentare e supporto per patologie metaboliche.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -415,6 +433,7 @@
                 </div>
             </div>
 
+            <!-- 7. Alessandro Cadeddu -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -425,6 +444,7 @@
                             <p class="text-xs text-slate-500 font-medium">Massoterapista MCB</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Trattamenti massoterapici decontratturanti, sportivi e riabilitativi per il recupero muscolare e articolare.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -433,6 +453,7 @@
                 </div>
             </div>
 
+            <!-- 8. Davide Cadeddu -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -443,6 +464,7 @@
                             <p class="text-xs text-slate-500 font-medium">Massoterapista MCB</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Terapie manuali mirate al trattamento di algie vertebrali, contratture e tensioni muscolari croniche o acute.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -451,6 +473,7 @@
                 </div>
             </div>
 
+            <!-- 9. Massimo Castagna -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -461,6 +484,7 @@
                             <p class="text-xs text-slate-500 font-medium">Infermiere</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Prestazioni infermieristiche ambulatoriali, medicazioni, iniezioni, misurazione parametri vitali ed elettrocardiogrammi.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -469,6 +493,7 @@
                 </div>
             </div>
 
+            <!-- 10. Matteo F. Cazzaniga -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -479,6 +504,7 @@
                             <p class="text-xs text-slate-500 font-medium">Massoterapista MCB e Osteopata</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Trattamenti osteopatici strutturali e viscerali combinati a tecniche massoterapiche avanzate per il benessere posturale.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -487,6 +513,7 @@
                 </div>
             </div>
 
+            <!-- 11. Dott. Alessio Colombo -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -497,6 +524,7 @@
                             <p class="text-xs text-slate-500 font-medium">Ortopedico e Medico dello Sport</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Valutazioni ortopediche specialistiche, traumi sportivi, infiltrazioni articolari e chirurgia protesica e artroscopica.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -505,6 +533,7 @@
                 </div>
             </div>
 
+            <!-- 12. Dott. Massimo Cocciolo -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -515,6 +544,7 @@
                             <p class="text-xs text-slate-500 font-medium">Oncologo, Internista, Ecografista</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Visite oncologiche, medicina interna, ecografie internistiche e diagnostica strumentale di precisione.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -523,6 +553,7 @@
                 </div>
             </div>
 
+            <!-- 13. Dott. Carlo Maricondi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -533,6 +564,7 @@
                             <p class="text-xs text-slate-500 font-medium">Angiologo</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Diagnostica vascolare non invasiva, ecocolordoppler dei tronchi sovraortici e degli arti inferiori/superiori.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -541,6 +573,7 @@
                 </div>
             </div>
 
+            <!-- 14. Dott.ssa Jasmine Corti -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -551,6 +584,7 @@
                             <p class="text-xs text-slate-500 font-medium">Logopedista</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Prevenzione e trattamento dei disturbi della voce, del linguaggio, della comunicazione e della deglutizione in età evolutiva e adulta.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -559,6 +593,7 @@
                 </div>
             </div>
 
+            <!-- 15. Dott.ssa Claudia Paone -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -569,6 +604,7 @@
                             <p class="text-xs text-slate-500 font-medium">Dietista</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Valutazione dei fabbisogni nutritivi, stesura di diete cliniche personalizzate e programmi di educazione nutrizionale.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -577,6 +613,7 @@
                 </div>
             </div>
 
+            <!-- 16. Dott. Marco Limonta -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -587,6 +624,7 @@
                             <p class="text-xs text-slate-500 font-medium">Fisiatra</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Medicina fisica e riabilitazione, valutazione funzionale e prescrizione di percorsi fisioterapici mirati.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -595,6 +633,7 @@
                 </div>
             </div>
 
+            <!-- 17. Dott.ssa Marta Merlini -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -605,6 +644,7 @@
                             <p class="text-xs text-slate-500 font-medium">Medico Estetico e Agopuntore</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Trattamenti di medicina estetica non invasiva e sedute di agopuntura medica per il trattamento del dolore e del benessere psico-fisico.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -613,6 +653,7 @@
                 </div>
             </div>
 
+            <!-- 18. Dott. Andrea Midi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -623,6 +664,7 @@
                             <p class="text-xs text-slate-500 font-medium">Rinnovo Patenti e Porto d'Armi</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Visite mediche legali e specialistiche per il rinnovo di patenti di guida, porto d'armi e certificazioni abilitative.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -631,6 +673,7 @@
                 </div>
             </div>
 
+            <!-- 19. Agnese Milani -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -641,6 +684,7 @@
                             <p class="text-xs text-slate-500 font-medium">Osteopata</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Trattamenti osteopatici mirati alla risoluzione di blocchi articolari, dolori cervicali, lombari e posturali.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -649,6 +693,7 @@
                 </div>
             </div>
 
+            <!-- 20. Manuele Monti -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -659,6 +704,7 @@
                             <p class="text-xs text-slate-500 font-medium">Fisioterapista</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Riabilitazione ortopedica, post-chirurgica e neuromuscolare con tecniche manuali ed elettromedicali.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -667,6 +713,7 @@
                 </div>
             </div>
 
+            <!-- 21. Dott.ssa Debora Maria Riva -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -677,6 +724,7 @@
                             <p class="text-xs text-slate-500 font-medium">Otorinolaringoiatra</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Diagnostica e cura delle patologie di orecchio, naso, gola, vertigini, acufeni e disturbi dell'udito.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -685,6 +733,7 @@
                 </div>
             </div>
 
+            <!-- 22. Dott.ssa Valeria Rocca -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -695,6 +744,7 @@
                             <p class="text-xs text-slate-500 font-medium">Ortopedico</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specialista in patologie dell'apparato locomotore, consulenze ortopediche e trattamenti conservativi.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -703,6 +753,7 @@
                 </div>
             </div>
 
+            <!-- 23. Giovanni Rota -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -713,6 +764,7 @@
                             <p class="text-xs text-slate-500 font-medium">Fisioterapista</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Percorsi di fisioterapia riabilitativa personalizzati per il recupero della piena funzionalità motoria.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -721,6 +773,7 @@
                 </div>
             </div>
 
+            <!-- 24. Dott. Giovanni Vergottini -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -731,6 +784,7 @@
                             <p class="text-xs text-slate-500 font-medium">Ortopedico</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Chirurgia ortopedica mininvasiva, traumatologia e trattamenti specialistici per le articolazioni.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -739,6 +793,7 @@
                 </div>
             </div>
 
+            <!-- 25. Équipe Neurochirurghi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -749,6 +804,7 @@
                             <p class="text-xs text-slate-500 font-medium">Specialisti Colonna Vertebrale</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Valutazioni neurochirurgiche avanzate per ernie discali, patologie della colonna e disturbi del sistema nervoso.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -757,7 +813,7 @@
                 </div>
             </div>
 
-            <!-- BACK OFFICE & ADMIN CARDS -->
+            <!-- 26. Erica Scerna (Back Office) -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -768,6 +824,7 @@
                             <p class="text-xs text-slate-500 font-medium">Amministrazione</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Gestione amministrativa, fatturazione, rapporti con fondi sanitari integrativi e assicurazioni convenzionate.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -776,6 +833,7 @@
                 </div>
             </div>
 
+            <!-- 27. Valentina Botturi (Back Office) -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -786,6 +844,7 @@
                             <p class="text-xs text-slate-500 font-medium">Front Office</p>
                         </div>
                     </div>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Accoglienza pazienti, coordinamento agende mediche, prenotazioni telefoniche e sportello informazioni.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -804,7 +863,7 @@
                 <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Assicurazioni & Fondi Sanitari</span>
                 <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Le Nostre Convenzioni</h2>
                 <p class="text-slate-600 text-sm">
-                    Il Poliambulatorio Parasanitis è convenzionato con le principali assicurazioni e network sanitari nazionali:
+                    Il Poliambulatorio Parasanitis è convenzionato con le principali compagnie assicurative e network sanitari nazionali:
                 </p>
             </div>
 
@@ -823,19 +882,19 @@
         </div>
     </section>
 
-    <!-- WELFARE -->
+    <!-- WELFARE AZIENDALE -->
     <section id="welfare" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-6">
                 <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi per i Lavoratori</span>
                 <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">Welfare Aziendale Parasanitis</h2>
                 <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-                    Utilizza il tuo credito welfare aziendale per accedere a visite specialistiche, diagnostica ed esami senza anticipi di denaro.
+                    Utilizza il tuo credito welfare aziendale per accedere a visite specialistiche, diagnostica ed esami senza anticipi di denaro, con gestione diretta delle pratiche.
                 </p>
             </div>
             <div class="lg:col-span-6 bg-slate-50 p-8 rounded-3xl border border-slate-200">
-                <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Piattaforme Welfare</h3>
-                <p class="text-xs text-slate-600 mb-4">Accettiamo i principali portali welfare: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou e molti altri.</p>
+                <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Piattaforme Welfare Accettate</h3>
+                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Collaboriamo con i principali portali welfare nazionali: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou e molti altri ancora.</p>
             </div>
         </div>
     </section>
@@ -856,6 +915,10 @@
                             <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
                             <span>info@parasanitis.it</span>
                         </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-medical-light"></i>
+                            <span>Via Sant'Agostino 57, 23892 Bulciago (LC)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -874,10 +937,12 @@
         </div>
     </section>
 
-    <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float">
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float" aria-label="Chat WhatsApp">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
+    <!-- FOOTER -->
     <footer class="bg-navy-950 text-slate-400 py-12 px-6 text-xs border-t border-navy-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
@@ -891,6 +956,7 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script>
         lucide.createIcons();
 
