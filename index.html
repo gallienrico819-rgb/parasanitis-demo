@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poliambulatorio Parasanitis | Eccellenza Medica e Riabilitazione a Bulciago</title>
+    <title>Poliambulatorio Parasanitis | Specialisti nel prendersi cura di te</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -22,11 +22,11 @@
                             50: '#f0f4f9',
                             100: '#d9e3f0',
                             800: '#132847',
-                            900: '#0f2b5c', // Logo Primary Navy
+                            900: '#0f2b5c',
                             950: '#0a1a38'
                         },
                         medical: {
-                            light: '#68a6e0', // Logo Light Blue
+                            light: '#68a6e0',
                             accent: '#2b82c9',
                             bg: '#f8fafc'
                         }
@@ -45,45 +45,71 @@
             background-color: #f8fafc;
             color: #1e293b;
         }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-medical-accent selection:text-white">
 
-    <!-- Top Info Bar -->
-    <div class="bg-navy-950 text-white text-xs py-2 px-6 border-b border-navy-800">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-6">
+    <!-- Top Info Bar con Direttore Sanitario SEMPRE Prominente in alto a destra -->
+    <div class="bg-navy-950 text-white text-xs py-2.5 px-6 border-b border-navy-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6 text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
-                <span class="hidden md:flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-medical-light"></i> Lun - Ven: 08:00 - 21:00 | Sab: 08:00 - 12:00</span>
+                <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952</span>
             </div>
-            <div class="flex items-center gap-4">
-                <span class="flex items-center gap-1.5"><i data-lucide="test-tube" class="w-3.5 h-3.5 text-medical-light"></i> Punto Prelievi Bianalisi: dalle 07:00</span>
-                <a href="tel:+393755506952" class="text-medical-light font-semibold hover:underline flex items-center gap-1">
-                    <i data-lucide="phone" class="w-3.5 h-3.5"></i> +39 375 550 6952
-                </a>
+            
+            <!-- SEZIONE OBBLIGATORIA DIREZIONE SANITARIA (Top Right) -->
+            <div class="flex items-center bg-navy-900 border border-medical-light/30 px-3 py-1 rounded-full text-right">
+                <i data-lucide="shield-check" class="w-4 h-4 text-medical-light mr-2 shrink-0"></i>
+                <div class="text-[11px]">
+                    <span class="text-slate-400 font-medium">Direttore Sanitario:</span> 
+                    <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong> 
+                    <span class="text-medical-light font-semibold ml-1">(Pneumologo e Allergologo)</span>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Header Navigation -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm sticky top-[37px] z-40">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center">
-                <img src="logo parasanitis.png" alt="Parasanitis Poliambulatorio Medico" class="h-12 w-auto object-contain">
+            <a href="#home" class="flex items-center">
+                <img src="logo parasanitis.png" alt="Poliambulatorio Medico Parasanitis" class="h-12 w-auto object-contain">
             </a>
 
-            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700">
+            <nav class="hidden md:flex items-center gap-7 font-medium text-sm text-slate-700">
                 <a href="#home" class="hover:text-navy-900 transition-colors font-semibold text-navy-900">Home</a>
-                <a href="#chi-siamo" class="hover:text-navy-900 transition-colors">Il Centro</a>
-                <a href="#servizi" class="hover:text-navy-900 transition-colors">Prestazioni</a>
-                <a href="#specialisti" class="hover:text-navy-900 transition-colors">Équipe Medica</a>
+                <a href="#specialisti" class="hover:text-navy-900 transition-colors">Specialisti</a>
+                <a href="#welfare" class="hover:text-navy-900 transition-colors">Welfare Aziendale</a>
+                <a href="#medicina-lavoro" class="hover:text-navy-900 transition-colors">Medicina del Lavoro</a>
                 <a href="#contatti" class="hover:text-navy-900 transition-colors">Contatti</a>
             </nav>
 
             <div class="hidden sm:flex items-center gap-3">
-                <a href="https://wa.me/393755506952" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition-all shadow-md flex items-center gap-2">
-                    <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    <span>Prenota WhatsApp</span>
+                <a href="https://alfadocs.it" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-bold bg-navy-900 hover:bg-navy-800 text-white transition-all shadow-md flex items-center gap-2">
+                    <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                    <span>Prenota Online AlfaDocs</span>
                 </a>
             </div>
 
@@ -94,557 +120,297 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
-            <a href="#chi-siamo" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Il Centro</a>
-            <a href="#servizi" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Prestazioni</a>
-            <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Équipe Medica</a>
+            <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialisti & Medici</a>
+            <a href="#welfare" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Welfare Aziendale</a>
+            <a href="#medicina-lavoro" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Medicina del Lavoro</a>
             <a href="#contatti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Contatti</a>
-            <a href="https://wa.me/393755506952" target="_blank" class="text-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-semibold uppercase">
-                Prenota su WhatsApp
+            <a href="https://alfadocs.it" target="_blank" class="text-center py-3 bg-navy-900 text-white rounded-xl text-xs font-bold">
+                Prenota Online con AlfaDocs
             </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative py-16 md:py-24 bg-gradient-to-br from-navy-900 via-navy-800 to-slate-900 text-white overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-7">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-medium mb-6 backdrop-blur-md">
-                    <span class="w-2 h-2 rounded-full bg-medical-light animate-pulse"></span>
-                    Poliambulatorio Specialistico • Bulciago (Lecco)
-                </div>
+    <!-- Hero Section con Slogan e Barra di Ricerca Specialista Immediata -->
+    <section id="home" class="relative py-16 md:py-24 bg-gradient-to-br from-navy-900 via-navy-800 to-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
+                Poliambulatorio Medico Parasanitis • Bulciago
+            </div>
 
-                <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
-                    La tua salute senza attese.<br>
-                    <span class="text-medical-light">La cura che meriti, vicina a te.</span>
-                </h1>
+            <!-- SLOGAN UFFICIALE -->
+            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">
+                Parasanitis,<br>
+                <span class="text-medical-light">specialisti nel prendersi cura di te.</span>
+            </h1>
 
-                <p class="text-base sm:text-lg text-slate-300 font-light leading-relaxed mb-8 max-w-2xl">
-                    Un'équipe medica multidisciplinare d'eccellenza in Brianza. Fisioterapia, ortopedia, ecografie, neurochirurgia, medicina specialistica e punto prelievi con appuntamenti rapidi e un ascolto medico autentico.
-                </p>
+            <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto mb-10">
+                Eccellenza medica, tempi di attesa azzerati e prenotazione autonoma in agenda con i nostri 25 specialisti.
+            </p>
 
-                <div class="flex flex-col sm:flex-row items-center gap-4">
-                    <a href="#contatti" class="w-full sm:w-auto px-8 py-4 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-sm transition-all shadow-lg flex items-center justify-center gap-2">
-                        <span>Richiedi Informazioni o Visita</span>
+            <!-- BARRA DI RICERCA SPECIALISTA -->
+            <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/40">
+                <div class="relative flex flex-col sm:flex-row items-center gap-3">
+                    <div class="relative w-full flex-grow">
+                        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                        <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Cerca il tuo specialista o la branca (es. Ortopedico, Fisioterapista, Psicologa...)" class="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
+                    </div>
+                    <a href="#specialisti" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 text-center flex items-center justify-center gap-2">
+                        <span>Trova Specialista</span>
                         <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
-                    <a href="#specialisti" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-sm transition-all flex items-center justify-center gap-2">
-                        <span>Scopri l'Équipe Medica</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="lg:col-span-5">
-                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 shadow-2xl">
-                    <h3 class="font-heading text-2xl font-semibold mb-6 text-white flex items-center gap-2">
-                        <i data-lucide="check-circle-2" class="text-medical-light"></i>
-                        Punti di Forza Parasanitis
-                    </h3>
-                    <ul class="space-y-4 text-sm text-slate-200">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="zap" class="w-5 h-5 text-medical-light shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-white block">Tempi di Attesa Ridotti</strong>
-                                Visite specialistiche ed ecografie garantite in pochi giorni.
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="users" class="w-5 h-5 text-medical-light shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-white block">25+ Specialisti Coordinati</strong>
-                                Un team completo di medici, terapisti e chirurghi.
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="test-tubes" class="w-5 h-5 text-medical-light shrink-0 mt-0.5"></i>
-                            <div>
-                                <strong class="text-white block">Punto Prelievi Bianalisi</strong>
-                                Analisi cliniche di laboratorio su appuntamento dalle 07:00.
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Il Centro Section -->
-    <section id="chi-siamo" class="py-20 px-6 max-w-7xl mx-auto border-b border-slate-200">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-6">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Il Nostro Impegno</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
-                    Un centro pensato per la persona, prima che per il paziente.
-                </h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-                    Situato a Bulciago (Lecco), il <strong>Poliambulatorio Parasanitis</strong> nasce con una missione precisa: offrire un punto di riferimento sanitario privato in grado di coniugare altissima competenza medica, tecnologie diagnostiche avanzate e un’attenzione profondamente umana.
-                </p>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    Sappiamo quanto l'attesa e l'incertezza possano generare ansia. Per questo motivo abbiamo strutturato una rete di specialisti altamente qualificati in grado di collaborare direttamente tra loro, garantendo percorsi di cura mirati, senza rimpalli e senza lunghe liste d’attesa.
-                </p>
-                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-100">
-                    <div>
-                        <span class="font-heading text-3xl font-bold text-navy-900 block">100%</span>
-                        <span class="text-xs text-slate-500">Approccio Multidisciplinare</span>
-                    </div>
-                    <div>
-                        <span class="font-heading text-3xl font-bold text-navy-900 block">Bulciago</span>
-                        <span class="text-xs text-slate-500">Punto Strategico Lecco-Monza</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-6 grid grid-cols-2 gap-4">
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                    <i data-lucide="activity" class="w-8 h-8 text-navy-900 mb-3"></i>
-                    <h4 class="font-bold text-navy-900 mb-1">Riabilitazione</h4>
-                    <p class="text-xs text-slate-500">Fisioterapia, osteopatia e massoterapia.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                    <i data-lucide="scan" class="w-8 h-8 text-navy-900 mb-3"></i>
-                    <h4 class="font-bold text-navy-900 mb-1">Ecografie</h4>
-                    <p class="text-xs text-slate-500">Diagnostica ad alta definizione in tempi brevi.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                    <i data-lucide="brain" class="w-8 h-8 text-navy-900 mb-3"></i>
-                    <h4 class="font-bold text-navy-900 mb-1">Neurochirurgia</h4>
-                    <p class="text-xs text-slate-500">Consulti specialistici per la colonna e il sistema nervoso.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                    <i data-lucide="heart-pulse" class="w-8 h-8 text-navy-900 mb-3"></i>
-                    <h4 class="font-bold text-navy-900 mb-1">Specialistica</h4>
-                    <p class="text-xs text-slate-500">Oncologia, ortopedia, angiologia e chirurgia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servizi" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Aree Mediche</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Le Nostre Prestazioni Specialistiche</h2>
+    <!-- ÉQUIPE MEDICA COMPLETA CON SCHEDE, LAUREA E PRENOTAZIONE ALFADOCS -->
+    <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica Specialistica</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Medici e Professionisti</h2>
             <p class="text-slate-600 text-sm">
-                Un'offerta sanitaria completa articolata in 4 macro-aree di intervento per rispondere con precisione ad ogni esigenza di salute.
+                Seleziona lo specialista di tuo interesse e prenota la visita direttamente in autonomia sulla nostra agenda AlfaDocs.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                <div>
-                    <span class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg mb-6">01</span>
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Riabilitazione & Movimento</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                        Fisioterapia, Fisiatria, Ortopedia, Osteopatia, Massoterapia MCB e recupero post-chirurgico o sportivo.
+        <!-- Sezione Risultati Ricerca -->
+        <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 1. Dott. Stefano Sala (Direttore Sanitario) -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">
+                            SS
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Direttore Sanitario</span>
+                            <h3 class="font-heading text-lg font-bold text-navy-900">Dott. Stefano Sala</h3>
+                            <p class="text-xs text-slate-500 font-medium">Pneumologo e Allergologo</p>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Laurea in Medicina e Chirurgia</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Specialista nella diagnosi e trattamento completo delle patologie dell'apparato respiratorio e delle malattie allergiche.
                     </p>
                 </div>
-                <a href="#contatti" class="text-xs font-bold text-navy-900 hover:text-medical-accent flex items-center gap-1">
-                    <span>Prenota Valutazione</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                </a>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                        <span>Prenota la tua visita con il Dottore</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                <div>
-                    <span class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg mb-6">02</span>
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Diagnostica & Ecografie</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                        Ecografie internistiche, muscoloscheletriche e vascolari eseguite da medici ecografisti esperti per diagnosi tempestive.
+            <!-- 2. Dott. Massimo Cocciolo -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">MC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Oncologia & Ecografia</span>
+                            <h3 class="font-heading text-lg font-bold text-navy-900">Dott. Massimo Cocciolo</h3>
+                            <p class="text-xs text-slate-500 font-medium">Oncologo, Internista, Ecografista</p>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Laurea in Medicina e Chirurgia</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Consulenze oncologiche, ecografie diagnostiche internistiche ed esami specialistici ad alta definizione.
                     </p>
                 </div>
-                <a href="#contatti" class="text-xs font-bold text-navy-900 hover:text-medical-accent flex items-center gap-1">
-                    <span>Prenota Ecografia</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                </a>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                        <span>Prenota la tua visita con il Dottore</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                <div>
-                    <span class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg mb-6">03</span>
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Medicina Specialistica</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                        Neurochirurgia, Oncologia, Pneumologia, Angiologia, Otorinolaringoiatria, Chirurgia e Medicina dello Sport.
+            <!-- 3. Dott. Alessio Colombo -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">AC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ortopedia & Sport</span>
+                            <h3 class="font-heading text-lg font-bold text-navy-900">Dott. Alessio Colombo</h3>
+                            <p class="text-xs text-slate-500 font-medium">Ortopedico e Medico dello Sport</p>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Laurea in Medicina e Chirurgia</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Trattamento dei traumi sportivi, lesioni articolari e prevenzione delle problematiche motorie.
                     </p>
                 </div>
-                <a href="#contatti" class="text-xs font-bold text-navy-900 hover:text-medical-accent flex items-center gap-1">
-                    <span>Consulta gli Specialisti</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                </a>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                        <span>Prenota la tua visita con il Dottore</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-                <div>
-                    <span class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg mb-6">04</span>
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-3">Benessere & Prevenzione</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed mb-6">
-                        Psicologia, Sessuologia, Logopedia, Dietetica, Podologia, Ostetricia, Medicina Estetica e Punto Prelievi Bianalisi.
+            <!-- 4. Dott.ssa Valeria Rocca -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">VR</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ortopedia</span>
+                            <h3 class="font-heading text-lg font-bold text-navy-900">Dott.ssa Valeria Rocca</h3>
+                            <p class="text-xs text-slate-500 font-medium">Ortopedico</p>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Laurea in Medicina e Chirurgia</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Specializzata nelle patologie articolari, ortopedia generale e percorsi conservativi post-traumatici.
                     </p>
                 </div>
-                <a href="#contatti" class="text-xs font-bold text-navy-900 hover:text-medical-accent flex items-center gap-1">
-                    <span>Punto Prelievi</span> <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                </a>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                        <span>Prenota la tua visita con la Dottoressa</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 5. Équipe Neurochirurgia -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">NC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Neurochirurgia</span>
+                            <h3 class="font-heading text-lg font-bold text-navy-900">Specialisti Neurochirurghi</h3>
+                            <p class="text-xs text-slate-500 font-medium">Neurochirurgia della Colonna</p>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Équipe Medico-Chirurgica</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Valutazione e trattamento specialistico di ernie del disco, sciatalgie e patologie della colonna vertebrale.
+                    </p>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                        <span>Prenota la tua visita con il Dottore</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 6. Matteo Francesco Cazzaniga -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-xl border border-navy-100 shrink-0">MC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Osteopatia & Massoterapia</span>
+                            <h3 class="font-heading text-lg font-bold text-navy-900">Matteo F. Cazzaniga</h3>
+                            <p class="text-xs text-slate-500 font-medium">Massoterapista MCB e Osteopata</p>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Diploma Osteopatia & Abilitazione MCB</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Riequilibrio posturale, manipolazioni osteopatiche e terapie manuali per il benessere muscolo-scheletrico.
+                    </p>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
+                        <span>Prenota la tua visita con il Terapista</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PAGINA WELFARE AZIENDALE -->
+    <section id="welfare" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi per i Lavoratori</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
+                        Welfare Aziendale Parasanitis
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                        Il <strong>Welfare Aziendale</strong> consente ai lavoratori dipendenti di utilizzare il credito welfare erogato dalla propria azienda per accedere a visite specialistiche, esami diagnostici e percorsi di fisioterapia presso il Poliambulatorio Parasanitis.
+                    </p>
+                    <h4 class="font-bold text-navy-900 text-sm mb-2">Perché utilizzarlo presso di noi?</h4>
+                    <ul class="space-y-3 text-xs sm:text-sm text-slate-600 mb-6">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span>Accesso diretto a oltre 25 specializzazioni mediche e diagnostica.</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span>Nessun anticipo di denaro tramite i principali portali welfare.</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                            <span>Estensione dei voucher anche per i familiari a carico.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-6 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-6">Piattaforme Welfare Convenzionate</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Edenred</div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Easy Welfare</div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Pellegrini Welfare</div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">TreCuori</div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">DoubleYou</div>
+                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 text-center text-sm">Altre Convenzioni</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Équipe Medica Section (FULL DOCTOR ROSTER) -->
-    <section id="specialisti" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Autorità e Competenza</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">La Nostra Équipe Medica Completa</h2>
-                <p class="text-slate-600 text-sm">
-                    Tutti gli specialisti, i medici e i terapisti operanti presso il Poliambulatorio Parasanitis.
+    <!-- PAGINA MEDICINA DEL LAVORO -->
+    <section id="medicina-lavoro" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi B2B per le Imprese</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Medicina del Lavoro per le Aziende</h2>
+            <p class="text-slate-600 text-sm">
+                Supportiamo le imprese del territorio nell'adempimento degli obblighi di legge (D.Lgs. 81/08) e nella tutela della salute dei lavoratori.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <i data-lucide="briefcase" class="w-8 h-8 text-navy-900 mb-4"></i>
+                <h3 class="font-heading text-lg font-bold text-navy-900 mb-2">Sorveglianza Sanitaria</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Nomina del Medico Competente, stesura del piano sanitario e gestione delle scadenze periodiche aziendali.
                 </p>
             </div>
-
-            <!-- Search Filter Bar -->
-            <div class="max-w-md mx-auto mb-12">
-                <div class="relative">
-                    <input type="text" id="doctorSearch" onkeyup="filterDoctors()" placeholder="Cerca uno specialista o una branca (es. Ortopedico, Psicologa...)" class="w-full bg-white border border-slate-300 rounded-2xl px-5 py-3 pl-12 text-sm shadow-sm focus:outline-none focus:border-navy-900">
-                    <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                </div>
+            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <i data-lucide="user-check" class="w-8 h-8 text-navy-900 mb-4"></i>
+                <h3 class="font-heading text-lg font-bold text-navy-900 mb-2">Visite di Idoneità</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Visite mediche preventive e periodiche per l'idoneità alla mansione specifica direttamente in struttura.
+                </p>
             </div>
-
-            <!-- Doctors Grid -->
-            <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <!-- 1. Dott. Stefano Sala -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Direzione Sanitaria • Pneumologia & Allergologia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Stefano Sala</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Pneumologo e Allergologo</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Diagnosi e trattamento delle malattie dell'apparato respiratorio e delle patologie allergiche.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 2. Dott. Massimo Cocciolo -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Oncologia & Diagnostica</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Massimo Cocciolo</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Oncologo, Medico Internista ed Ecografista</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Consulenze oncologiche, ecografie internistiche e valutazioni cliniche complesse.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 3. Dott.ssa Valeria Rocca -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Ortopedia & Traumatologia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Valeria Rocca</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Ortopedico</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Trattamento delle patologie articolari, muscoloscheletriche e percorsi di cura ortopedici.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 4. Dott. Alessio Colombo -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Ortopedia & Medicina dello Sport</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Alessio Colombo</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Ortopedico e Medico dello Sport</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Specialista nella cura dei traumi sportivi e prevenzione delle lesioni muscolari e articolari.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 5. Dott. Giovanni Vergottini -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Ortopedia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Giovanni Vergottini</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Ortopedico</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Valutazioni specialistiche ortopediche per problemi alle grandi e piccole articolazioni.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 6. Neurochirurgia -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Neurochirurgia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Équipe di Neurochirurgia</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Neurochirurghi</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Consulenze specialistiche per patologie della colonna vertebrale, erne del disco e sistema nervoso.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 7. Dott. Marco Limonta -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Fisiatria & Riabilitazione</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Marco Limonta</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Fisiatra</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Impostazione di programmi riabilitativi e fisiochinesiologici personalizzati.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 8. Dott. Carlo Maricondi -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Angiologia & Chirurgia Vascolare</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Carlo Maricondi</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Angiologo</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Diagnosi e cura delle malattie venose e arteriose con supporto ecocolordoppler.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 9. Dott. Debora Maria Riva -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Otorinolaringoiatria</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Debora Maria Riva</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Otorinolaringoiatra</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Trattamento dei disturbi dell'orecchio, del naso, della gola e problemi di equilibrio.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 10. Dott.ssa Marta Merlini -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Medicina Estetica & Agopuntura</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Marta Merlini</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Medico Estetico e Agopuntore</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Trattamenti di medicina estetica non invasiva e sedute di agopuntura terapeutica.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 11. Dott. Andrea Midi -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Medicina Legale & Certificazioni</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott. Andrea Midi</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Medico Chirurgo (Patenti & Porto d'armi)</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Visite mediche per rinnovo e rilascio patente di guida, nautica e porto d'armi.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 12. Dott.ssa Margherita Barbera -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Ostetricia & Sessuologia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Margherita Barbera</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Ostetrica e Consulente Sessuale</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Assistenza ostetrica, consulenze sulla salute femminile e consulenze sessuologiche.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 13. Dott.ssa Carin Irma Blumenthal -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Psicologia & Sessuologia Clinica</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Carin Irma Blumenthal</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Psicologa e Sessuologa Clinica</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Supporto psicologico individuale e di coppia, percorsi di sessuologia clinica.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 14. Dott.ssa Daniela Benez Ferreira -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Psicologia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Daniela Benez Ferreira</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Psicologa</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Colloqui psicologici di sostegno per ansia, stress e momenti di difficoltà personale.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 15. Dott.ssa Jasmine Corti -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Logopedia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Jasmine Corti</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Logopedista</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Valutazione e rieducazione dei disturbi del linguaggio, della voce e della deglutizione.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 16. Dott.ssa Manuela Beccalli -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Podologia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Manuela Beccalli</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Podologa</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Cura del piede, trattamento dell'unghia incarnita, ipercheratosi e valutazione posturale.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 17. Dott.ssa Alice Boaretto -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Dietetica & Nutrizione</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Alice Boaretto</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Dietista</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Piani alimentari personalizzati per la perdita di peso, la nutrizione sportiva e patologie cliniche.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 18. Dott.ssa Claudia Paone -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Dietetica & Nutrizione</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Dott.ssa Claudia Paone</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Dietista</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Consulenze nutrizionali, educazione alimentare e diete terapeutiche mirate.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 19. Matteo Francesco Cazzaniga -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Osteopatia & Massoterapia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Matteo Francesco Cazzaniga</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Massoterapista MCB e Osteopata</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Trattamenti osteopatici e terapie manuali per il riequilibrio posturale e del dolore vertebrale.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 20. Agnese Milani -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Osteopatia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Agnese Milani</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Osteopata</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Trattamenti manuali osteopatici per cefalee, dolori cervicali e problematiche muscolari.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 21. Manuele Monti -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Fisioterapia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Manuele Monti</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Fisioterapista</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Riabilitazione ortopedica, kinesiterapia e recupero funzionale post-infortunio.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 22. Giovanni Rota -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Fisioterapia</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Giovanni Rota</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Fisioterapista</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Terapie fisiche e percorsi riabilitativi mirati per il ripristino della mobilità artro-muscolare.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 23. Alessandro Cadeddu -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Massoterapia MCB</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Alessandro Cadeddu</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Massoterapista MCB</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Massaggi terapeutici, decontratturanti e linfodrenaggio per il benessere muscolare.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 24. Davide Cadeddu -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Massoterapia MCB</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Davide Cadeddu</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Massoterapista MCB</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Terapie manuali e massoterapia preventiva e riabilitativa.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
-                <!-- 25. Massimo Castagna -->
-                <div class="doctor-card p-6 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] font-bold font-mono text-medical-accent uppercase block mb-1">Servizi Infermieristici</span>
-                        <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Massimo Castagna</h3>
-                        <p class="text-xs text-slate-500 font-medium mb-3">Infermiere</p>
-                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                            Prestazioni infermieristiche ambulatoriali, medicazioni e supporto al punto prelievi.
-                        </p>
-                    </div>
-                    <a href="#contatti" class="w-full py-2.5 rounded-xl border border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold text-center">Prenota Visita</a>
-                </div>
-
+            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <i data-lucide="activity" class="w-8 h-8 text-navy-900 mb-4"></i>
+                <h3 class="font-heading text-lg font-bold text-navy-900 mb-2">Esami e Accertamenti</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Esami ematochimici con punto prelievi dedicato, spirometrie, audiometrie e drug test in sede.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Booking Section -->
-    <section id="contatti" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+    <!-- PAGINA CONTATTI -->
+    <section id="contatti" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div class="lg:col-span-5">
-                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Dove Siamo e Contatti</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">Prenota la tua visita a Bulciago</h2>
-                    <p class="text-slate-300 text-sm mb-8 leading-relaxed">
-                        Compila il modulo o contattaci direttamente per richiedere informazioni sulle prestazioni o fissare un appuntamento con i nostri specialisti.
-                    </p>
-
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Poliambulatorio Parasanitis</span>
+                    <h2 class="font-heading text-3xl font-bold mb-6">Contatti e Sede</h2>
                     <div class="space-y-4 text-sm text-slate-200">
                         <div class="flex items-center gap-3">
                             <i data-lucide="map-pin" class="w-5 h-5 text-medical-light"></i>
@@ -655,90 +421,47 @@
                             <a href="tel:+393755506952" class="hover:text-medical-light">+39 375 550 6952</a>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
-                            <span>info@parasanitis.it</span>
-                        </div>
-                        <div class="flex items-center gap-3">
                             <i data-lucide="clock" class="w-5 h-5 text-medical-light"></i>
                             <span>Lun - Ven: 08:00 - 21:00 | Sab: 08:00 - 12:00</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-2xl shadow-lg">
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Richiesta Informazioni / Prenotazione</h3>
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Grazie! La richiesta è stata inviata.');">
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-2xl">
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Invia un messaggio alla Segreteria</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Messaggio inviato con successo!');">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1 uppercase">Nome e Cognome</label>
-                                <input type="text" required placeholder="Mario Rossi" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-navy-900">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-600 mb-1 uppercase">Telefono</label>
-                                <input type="tel" required placeholder="+39 333 1234567" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-navy-900">
-                            </div>
+                            <input type="text" placeholder="Nome e Cognome" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+                            <input type="tel" placeholder="Telefono" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
                         </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-600 mb-1 uppercase">Specializzazione o Visita di Interesse</label>
-                            <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-navy-900">
-                                <option>Pneumologia / Allergologia (Dott. Sala)</option>
-                                <option>Oncologia / Ecografia (Dott. Cocciolo)</option>
-                                <option>Ortopedia / Traumatologia</option>
-                                <option>Neurochirurgia</option>
-                                <option>Angiologia (Dott. Maricondi)</option>
-                                <option>Otorinolaringoiatria (Dott.ssa Riva)</option>
-                                <option>Fisioterapia / Osteopatia / Massoterapia</option>
-                                <option>Psicologia / Sessuologia</option>
-                                <option>Nutrizione / Dietetica</option>
-                                <option>Punto Prelievi Bianalisi</option>
-                                <option>Altra Prestazione Specialistica</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold text-slate-600 mb-1 uppercase">Note / Messaggio</label>
-                            <textarea rows="3" placeholder="Indica se desideri uno specialista specifico o il giorno preferito..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-navy-900"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-3.5 rounded-xl bg-navy-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-navy-800 transition-all shadow-md">
-                            Invia Richiesta
-                        </button>
+                        <textarea rows="3" placeholder="Come possiamo aiutarti?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm"></textarea>
+                        <button type="submit" class="w-full py-3 bg-navy-900 text-white font-bold text-xs uppercase rounded-xl">Invia Richiesta</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- WIDGET WHATSAPP FISSO IN BASSO A DESTRA SU OGNI PAGINA -->
+    <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float" aria-label="Contatta la segreteria su WhatsApp">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
     <!-- Footer -->
-    <footer class="bg-navy-950 text-slate-400 py-12 px-6 text-xs border-t border-navy-800">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-4">
-                <img src="logo parasanitis.png" alt="Parasanitis Logo" class="h-10 w-auto bg-white p-1 rounded">
-                <div>
-                    <span class="text-white font-bold block">Parasanitis S.r.l.</span>
-                    <span>Poliambulatorio Medico Specialistico • Bulciago (LC)</span>
-                </div>
-            </div>
-            <div class="text-center md:text-right">
-                <p>© 2026 Parasanitis S.r.l. - Tutti i diritti riservati.</p>
-                <p class="text-slate-500 mt-1">Via Sant'Agostino 57, 23892 Bulciago (LC) | P.IVA Parasanitis S.r.l.</p>
-            </div>
-        </div>
+    <footer class="bg-navy-950 text-slate-400 py-8 px-6 text-xs text-center border-t border-navy-800">
+        <p>© 2026 Poliambulatorio Parasanitis S.r.l. - Via Sant'Agostino 57, Bulciago (LC)</p>
+        <p class="mt-1 text-slate-500">Direttore Sanitario: Dott. Stefano Sala (Pneumologo e Allergologo)</p>
     </footer>
 
     <script>
         lucide.createIcons();
 
         function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            if(menu) {
-                menu.classList.toggle('hidden');
-            }
+            document.getElementById('mobile-menu').classList.toggle('hidden');
         }
 
-        function filterDoctors() {
-            const input = document.getElementById('doctorSearch').value.toLowerCase();
+        function searchDoctorAndScroll() {
+            const input = document.getElementById('heroDoctorSearch').value.toLowerCase();
             const cards = document.getElementsByClassName('doctor-card');
 
             for (let i = 0; i < cards.length; i++) {
