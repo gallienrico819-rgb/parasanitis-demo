@@ -73,26 +73,19 @@
         .bg-checkup-overlay {
             background: linear-gradient(135deg, rgba(15, 43, 92, 0.90) 0%, rgba(43, 130, 201, 0.85) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
         }
+        .bg-blood-overlay {
+            background: linear-gradient(135deg, rgba(185, 28, 28, 0.92) 0%, rgba(153, 27, 27, 0.95) 100%), url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-medical-accent selection:text-white">
 
-    <!-- Top Info Bar with Dual Language Switcher (EN ACTIVE / IT LINK) -->
+    <!-- Top Info Bar with Dual Language Switcher (Routes back to ../index.html) -->
     <div class="bg-navy-950 text-white text-xs py-2.5 px-6 border-b border-navy-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
             <div class="flex items-center gap-6 text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
                 <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952 | +39 031 687 7590</span>
-                
-                <div class="hidden sm:flex items-center gap-3 pl-4 border-l border-navy-800">
-                    <a href="https://wa.me/393755506952" target="_blank" class="text-emerald-400 hover:text-white transition-colors" aria-label="WhatsApp"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
-                    <span class="text-slate-600">|</span>
-                    <a href="https://facebook.com" target="_blank" class="text-medical-light hover:text-white transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-                    <span class="text-slate-600">|</span>
-                    <a href="https://youtube.com" target="_blank" class="text-red-400 hover:text-white transition-colors" aria-label="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
-                    <span class="text-slate-600">|</span>
-                    <a href="https://instagram.com" target="_blank" class="text-pink-400 hover:text-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-                </div>
             </div>
             
             <div class="flex items-center gap-4">
@@ -105,7 +98,7 @@
                     </div>
                 </div>
 
-                <!-- IT / EN TOGGLE BUTTONS (Routes back to ../index.html) -->
+                <!-- IT / EN TOGGLE BUTTONS -->
                 <div class="flex items-center bg-navy-900 border border-slate-700 rounded-full p-1 gap-1 shadow-inner">
                     <a href="../index.html" class="bg-navy-800 hover:bg-navy-700 text-slate-200 hover:text-white font-bold px-3 py-1 rounded-full text-xs transition-all flex items-center gap-1 border border-slate-600">
                         <span>🇮🇹 IT</span>
@@ -129,6 +122,7 @@
                 <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
                 <a href="#facility" class="hover:text-navy-900">Our Centre</a>
                 <a href="#specialists" class="hover:text-navy-900">Specialists</a>
+                <a href="#blood-tests" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Blood Tests</a>
                 <a href="#checkup" class="hover:text-navy-900">Health Checkups</a>
                 <a href="#partnerships" class="hover:text-navy-900">Partnerships</a>
                 <a href="#welfare" class="hover:text-navy-900">Corporate Welfare</a>
@@ -151,6 +145,7 @@
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
             <a href="#facility" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Our Centre</a>
             <a href="#specialists" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialists</a>
+            <a href="#blood-tests" onclick="toggleMobileMenu()" class="text-sm font-bold text-red-600">Blood Tests</a>
             <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Health Checkups</a>
             <a href="#partnerships" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Partnerships</a>
             <a href="#welfare" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Corporate Welfare</a>
@@ -232,7 +227,7 @@
         </div>
     </section>
 
-    <!-- FACILITY SECTION -->
+    <!-- FACILITY SECTION WITH CLICKABLE GYM CARD -->
     <section id="facility" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="bg-facility-overlay rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
             <div class="max-w-3xl">
@@ -248,11 +243,19 @@
                         <h4 class="font-bold text-sm text-white mb-1">Medical Suites</h4>
                         <p class="text-xs text-slate-300">Fully equipped for consultations and ultrasounds.</p>
                     </div>
-                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
-                        <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light mb-2"></i>
-                        <h4 class="font-bold text-sm text-white mb-1">Physiotherapy Gym</h4>
-                        <p class="text-xs text-slate-300">Dedicated space for motor rehabilitation.</p>
+
+                    <!-- CLICKABLE GYM CARD -->
+                    <div onclick="openGymModal()" class="bg-white/15 hover:bg-white/25 backdrop-blur-md p-5 rounded-2xl border-2 border-medical-light/60 transition-all cursor-pointer group shadow-lg">
+                        <div class="flex items-center justify-between mb-2">
+                            <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light group-hover:scale-110 transition-transform"></i>
+                            <span class="text-[10px] bg-medical-light/30 text-white font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="camera" class="w-3 h-3"></i> Photos
+                            </span>
+                        </div>
+                        <h4 class="font-bold text-sm text-white mb-1 group-hover:text-medical-light transition-colors">Physiotherapy Gym</h4>
+                        <p class="text-xs text-slate-300">Click to view photos of our rehab gym and facilities.</p>
                     </div>
+
                     <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
                         <i data-lucide="brain" class="w-8 h-8 text-medical-light mb-2"></i>
                         <h4 class="font-bold text-sm text-white mb-1">Psychology Suites</h4>
@@ -268,7 +271,77 @@
         </div>
     </section>
 
-    <!-- DOCTORS & STAFF (27 CARDS) -->
+    <!-- NEW DEDICATED RED BLOOD TEST SECTION -->
+    <section id="blood-tests" class="py-12 px-6 max-w-7xl mx-auto">
+        <div class="bg-blood-overlay rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border-2 border-red-400/30">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-md border border-white/20">
+                        <i data-lucide="droplet" class="w-4 h-4 text-red-200 fill-current"></i>
+                        Blood Sampling Station
+                    </div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold mb-3 text-white">
+                        Book Your Blood Tests
+                    </h2>
+                    <p class="text-red-100 text-base font-bold mb-3 uppercase tracking-wide">
+                        Skip the queue and select your preferred time slot
+                    </p>
+                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+                        At Parasanitis Medical Centre, you can undergo routine blood tests and lab analyses with scheduled priority access. Book online directly via AlfaDocs to select your convenient time and avoid queueing.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 bg-white/95 backdrop-blur-md text-slate-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-red-100 text-center">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                        <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Zero Queue, Zero Delays</h3>
+                    <p class="text-xs text-slate-600 mb-6">Select your appointment date and time in just a few clicks.</p>
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-lg shadow-red-600/30 flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>Book Blood Tests</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEALTH CHECKUP SECTION -->
+    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-checkup-overlay rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevention & Care</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Book Your Personalized Health Checkup</h2>
+                    <p class="text-slate-200 text-sm leading-relaxed mb-6">
+                        Our multidisciplinary team works together to fulfill your clinical needs and support your long-term health and wellbeing goals.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="heart-pulse" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Angiology</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="scan" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Ultrasounds</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="test-tube-2" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Clinical Labs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Tell Us Your Needs</h3>
+                    <p class="text-xs text-slate-500 mb-6">We listen carefully and arrange rapid appointment schedules for you.</p>
+                    <a href="#contact" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCTORS & STAFF (FULL 27 CARDS) -->
     <section id="specialists" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Medical Team & Administrative Staff</span>
@@ -909,6 +982,36 @@
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
+    <!-- GYM PHOTO GALLERY MODAL -->
+    <div id="gymModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block">Rehabilitation Suite</span>
+                    <h3 class="font-heading text-xl font-bold text-navy-900">Parasanitis Physiotherapy Gym</h3>
+                </div>
+                <button onclick="closeGymModal()" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-all">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto pr-1">
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Physiotherapy Gym Equipment" class="w-full h-56 object-cover">
+                    <div class="p-3 bg-slate-50 text-xs text-slate-600 font-medium">State-of-the-art motor and functional rehabilitation equipment</div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Manual Therapy Suite" class="w-full h-56 object-cover">
+                    <div class="p-3 bg-slate-50 text-xs text-slate-600 font-medium">Dedicated spaces for physiotherapy and manual massage treatments</div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-100 mt-6 flex justify-end">
+                <button onclick="closeGymModal()" class="px-6 py-2.5 bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs rounded-xl">Close</button>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="bg-navy-950 text-slate-400 py-12 px-6 text-xs border-t border-navy-800">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -929,6 +1032,14 @@
 
         function toggleMobileMenu() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function openGymModal() {
+            document.getElementById('gymModal').classList.remove('hidden');
+        }
+
+        function closeGymModal() {
+            document.getElementById('gymModal').classList.add('hidden');
         }
 
         function searchDoctorAndScroll() {
