@@ -56,7 +56,7 @@
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.25);
             z-index: 100;
             display: flex;
             align-items: center;
@@ -67,20 +67,41 @@
             transform: scale(1.1);
             background-color: #20ba5a;
         }
+        .bg-hero-overlay {
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.94) 0%, rgba(10, 26, 56, 0.92) 100%), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
+        .bg-facility-overlay {
+            background: linear-gradient(to right, rgba(15, 43, 92, 0.95) 30%, rgba(15, 43, 92, 0.75) 100%), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
+        .bg-checkup-overlay {
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.92) 0%, rgba(43, 130, 201, 0.88) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-medical-accent selection:text-white">
 
-    <!-- Top Info Bar con Direttore Sanitario SEMPRE Prominente in alto a destra -->
+    <!-- Top Info Bar con Social Network Links e Direttore Sanitario (Top Right) -->
     <div class="bg-navy-950 text-white text-xs py-2.5 px-6 border-b border-navy-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+            
             <div class="flex items-center gap-6 text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
                 <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952 | +39 031 687 7590</span>
+                
+                <!-- SOCIAL MEDIA CONNECTIONS (SISTEMA INTEGRATO) -->
+                <div class="hidden sm:flex items-center gap-3 pl-4 border-l border-navy-800">
+                    <a href="https://wa.me/393755506952" target="_blank" class="text-emerald-400 hover:text-white transition-colors" title="WhatsApp"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+                    <span class="text-slate-600">|</span>
+                    <a href="https://facebook.com" target="_blank" class="text-medical-light hover:text-white transition-colors" title="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <span class="text-slate-600">|</span>
+                    <a href="https://youtube.com" target="_blank" class="text-red-400 hover:text-white transition-colors" title="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                    <span class="text-slate-600">|</span>
+                    <a href="https://instagram.com" target="_blank" class="text-pink-400 hover:text-white transition-colors" title="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
             </div>
             
-            <!-- SEZIONE OBBLIGATORIA DIREZIONE SANITARIA (Top Right) -->
-            <div class="flex items-center bg-navy-900 border border-medical-light/30 px-3 py-1 rounded-full text-right">
+            <!-- SEZIONE OBBLIGATORIA DIREZIONE SANITARIA -->
+            <div class="flex items-center bg-navy-900 border border-medical-light/30 px-3.5 py-1 rounded-full text-right">
                 <i data-lucide="shield-check" class="w-4 h-4 text-medical-light mr-2 shrink-0"></i>
                 <div class="text-[11px]">
                     <span class="text-slate-400 font-medium">Direttore Sanitario:</span> 
@@ -100,6 +121,7 @@
 
             <nav class="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm text-slate-700">
                 <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
+                <a href="#struttura" class="hover:text-navy-900">Il Nuovo Centro</a>
                 <a href="#specialisti" class="hover:text-navy-900">Specialisti</a>
                 <a href="#checkup" class="hover:text-navy-900">Check Up</a>
                 <a href="#convenzioni" class="hover:text-navy-900">Convenzioni</a>
@@ -122,6 +144,7 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
+            <a href="#struttura" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Il Nuovo Centro (9 Ambulatori)</a>
             <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialisti & Medici</a>
             <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Check Up</a>
             <a href="#convenzioni" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Convenzioni Assicurative</a>
@@ -134,25 +157,25 @@
         </div>
     </header>
 
-    <!-- Hero Section con Slogan e Barra di Ricerca Specialista Immediata -->
-    <section id="home" class="relative py-16 md:py-24 bg-gradient-to-br from-navy-900 via-navy-800 to-slate-900 text-white">
+    <!-- HERO SECTION CON SFONDO MEDICO PROFESSIONAL HIGH-RES -->
+    <section id="home" class="relative py-20 md:py-32 bg-hero-overlay text-white shadow-inner">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
-                Poliambulatorio Medico Parasanitis • Bulciago
+                <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                Poliambulatorio Medico Parasanitis • Bulciago (Lecco)
             </div>
 
-            <!-- SLOGAN UFFICIALE -->
-            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">
+            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-md">
                 Parasanitis,<br>
                 <span class="text-medical-light">specialisti nel prendersi cura di te.</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto mb-10">
-                Eccellenza medica, tempi di attesa azzerati e prenotazione autonoma in agenda con i nostri 25 specialisti.
+            <p class="text-base sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Un centro completamente rinnovato con 9 ambulatori medici, palestra di fisioterapia e 25 specialisti. Tempi di attesa azzerati e prenotazione online 24/7.
             </p>
 
             <!-- BARRA DI RICERCA SPECIALISTA -->
-            <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/40">
+            <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
                 <div class="relative flex flex-col sm:flex-row items-center gap-3">
                     <div class="relative w-full flex-grow">
                         <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
@@ -167,15 +190,51 @@
         </div>
     </section>
 
-    <!-- SEZIONE CHECK UP -->
-    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto border-b border-slate-200">
-        <div class="bg-gradient-to-r from-navy-900 to-navy-800 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+    <!-- SEZIONE IL NUOVO POLIAMBULATORIO (9 AMBULATORI + PALESTRA FISIOTERAPIA) -->
+    <section id="struttura" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-facility-overlay rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">I Nostri Nuovi Spazi</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">Un Polo Sanitario Moderno e Avanzato</h2>
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
+                    Ci siamo ampliati per offrirti il massimo della cura e del comfort. Il Poliambulatorio Parasanitis dispone oggi di una struttura completamente nuova strutturata per rispondere ad ogni esigenza clinica e riabilitativa:
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                        <span class="font-heading text-3xl font-extrabold text-medical-light block mb-1">9</span>
+                        <h4 class="font-bold text-sm text-white mb-1">Ambulatori Medici</h4>
+                        <p class="text-xs text-slate-300">Spazi attrezzati per visite specialistiche ed ecografie.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                        <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-sm text-white mb-1">Palestra Fisioterapica</h4>
+                        <p class="text-xs text-slate-300">Area dedicata alla rieducazione motoria e funzionale.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                        <i data-lucide="brain" class="w-8 h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-sm text-white mb-1">Area Psicologia</h4>
+                        <p class="text-xs text-slate-300">Studi riservati per percorsi di supporto e sessuologia.</p>
+                    </div>
+                </div>
+
+                <a href="#specialisti" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg">
+                    <span>Scopri Tutti gli Specialisti</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEZIONE CHECK UP CON SFONDO APPARECCHIATURE MEDICHE -->
+    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-checkup-overlay rounded-3xl p-8 sm:p-12 text-white shadow-xl">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-7">
                     <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevenzione e Cura Multidisciplinare</span>
                     <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prenota Il Tuo Check Up</h2>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Il nostro team di specialisti lavora in modo multidisciplinare proprio per prendersi cura di te rispettando i tuoi bisogni e i tuoi obiettivi di salute.
+                    <p class="text-slate-200 text-sm leading-relaxed mb-6">
+                        Il nostro team di specialisti lavora in modo multidisciplinare per prendersi cura di te rispettando i tuoi bisogni e i tuoi obiettivi di salute.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                         <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
@@ -195,7 +254,7 @@
                 <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
                     <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Raccontaci il tuo bisogno</h3>
                     <p class="text-xs text-slate-500 mb-6">Ti ascolteremo e ti aiuteremo subito con appuntamenti in poco tempo.</p>
-                    <a href="#contatti" class="w-full py-4 rounded-xl bg-medical-accent hover:bg-navy-900 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
+                    <a href="#contatti" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
                         Prenota Ora
                     </a>
                 </div>
@@ -207,7 +266,7 @@
     <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica Specialistica</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Medici e Professionisti</h2>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Medici e Terapisti</h2>
             <p class="text-slate-600 text-sm">
                 Seleziona lo specialista di tuo interesse e prenota la visita direttamente in autonomia sulla nostra agenda AlfaDocs.
             </p>
@@ -292,7 +351,7 @@
     <section id="convenzioni" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Assicurazioni & Fund Sanitari</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Assicurazioni & Fondi Sanitari</span>
                 <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Le Nostre Convenzioni</h2>
                 <p class="text-slate-600 text-sm">
                     Il Poliambulatorio Parasanitis è convenzionato con le principali assicurazioni e network sanitari nazionali:
@@ -322,7 +381,7 @@
         </div>
     </section>
 
-    <!-- PAGINA WELFARE AZIENDALE -->
+    <!-- WELFARE AZIENDALE -->
     <section id="welfare" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-6">
@@ -339,15 +398,6 @@
         </div>
     </section>
 
-    <!-- PAGINA MEDICINA DEL LAVORO -->
-    <section id="medicina-lavoro" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi B2B per le Imprese</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Medicina del Lavoro</h2>
-            <p class="text-slate-600 text-sm">Sorveglianza Sanitaria, Medico Competente e Visite di Idoneità ai sensi del D.Lgs. 81/08.</p>
-        </div>
-    </section>
-
     <!-- CONTATTI -->
     <section id="contatti" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
         <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
@@ -355,7 +405,7 @@
                 <div class="lg:col-span-5">
                     <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Hai bisogno dei nostri servizi?</span>
                     <h2 class="font-heading text-3xl font-bold mb-4">Sentiti libero di contattarci</h2>
-                    <div class="space-y-4 text-sm text-slate-200">
+                    <div class="space-y-4 text-sm text-slate-200 mb-8">
                         <div class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-5 h-5 text-medical-light"></i>
                             <span>+39 375 550 6952 | +39 031 687 7590</span>
@@ -363,6 +413,17 @@
                         <div class="flex items-center gap-3">
                             <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
                             <span>info@parasanitis.it</span>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL NETWORK LINKS IN CONTACT SECTION -->
+                    <div class="pt-6 border-t border-navy-800">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">Seguici sui nostri canali:</span>
+                        <div class="flex items-center gap-4 text-sm">
+                            <a href="https://wa.me/393755506952" target="_blank" class="p-2.5 rounded-full bg-white/10 hover:bg-emerald-600 transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
+                            <a href="https://facebook.com" target="_blank" class="p-2.5 rounded-full bg-white/10 hover:bg-blue-600 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                            <a href="https://youtube.com" target="_blank" class="p-2.5 rounded-full bg-white/10 hover:bg-red-600 transition-colors"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+                            <a href="https://instagram.com" target="_blank" class="p-2.5 rounded-full bg-white/10 hover:bg-pink-600 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
                         </div>
                     </div>
                 </div>
