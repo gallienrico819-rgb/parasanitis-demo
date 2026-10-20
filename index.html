@@ -15,89 +15,927 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: { 50: '#f0f4f9', 100: '#d9e3f0', 800: '#132847', 900: '#0f2b5c', 950: '#0a1a38' },
-                        medical: { light: '#68a6e0', accent: '#2b82c9', bg: '#f8fafc' }
+                        navy: {
+                            50: '#f0f4f9',
+                            100: '#d9e3f0',
+                            800: '#132847',
+                            900: '#0f2b5c',
+                            950: '#0a1a38'
+                        },
+                        medical: {
+                            light: '#68a6e0',
+                            accent: '#2b82c9',
+                            bg: '#f8fafc'
+                        }
                     },
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] }
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif']
+                    }
                 }
             }
         }
     </script>
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #1e293b; }
-        .whatsapp-float { position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 12px rgba(0,0,0,0.25); z-index: 100; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
-        .whatsapp-float:hover { transform: scale(1.1); background-color: #20ba5a; }
-        .bg-hero-overlay { background: linear-gradient(135deg, rgba(15, 43, 92, 0.88) 0%, rgba(10, 26, 56, 0.92) 100%), url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; }
-        .bg-facility-overlay { background: linear-gradient(to right, rgba(15, 43, 92, 0.92) 30%, rgba(15, 43, 92, 0.80) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; }
-        .bg-checkup-overlay { background: linear-gradient(135deg, rgba(15, 43, 92, 0.90) 0%, rgba(43, 130, 201, 0.85) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.25);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+        .bg-hero-overlay {
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.88) 0%, rgba(10, 26, 56, 0.92) 100%), url('https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
+        .bg-facility-overlay {
+            background: linear-gradient(to right, rgba(15, 43, 92, 0.92) 30%, rgba(15, 43, 92, 0.80) 100%), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
+        .bg-checkup-overlay {
+            background: linear-gradient(135deg, rgba(15, 43, 92, 0.90) 0%, rgba(43, 130, 201, 0.85) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-medical-accent selection:text-white">
 
+    <!-- Top Info Bar -->
     <div class="bg-navy-950 text-white text-xs py-2.5 px-6 border-b border-navy-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
             <div class="flex items-center gap-6 text-slate-300">
                 <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
                 <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952 | +39 031 687 7590</span>
+                
+                <div class="hidden sm:flex items-center gap-3 pl-4 border-l border-navy-800">
+                    <a href="https://wa.me/393755506952" target="_blank" class="text-emerald-400 hover:text-white transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+                    <span class="text-slate-600">|</span>
+                    <a href="https://facebook.com" target="_blank" class="text-medical-light hover:text-white transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <span class="text-slate-600">|</span>
+                    <a href="https://youtube.com" target="_blank" class="text-red-400 hover:text-white transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+                    <span class="text-slate-600">|</span>
+                    <a href="https://instagram.com" target="_blank" class="text-pink-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                </div>
             </div>
+            
             <div class="flex items-center bg-navy-900 border border-medical-light/30 px-3.5 py-1 rounded-full text-right">
                 <i data-lucide="shield-check" class="w-4 h-4 text-medical-light mr-2 shrink-0"></i>
                 <div class="text-[11px]">
                     <span class="text-slate-400 font-medium">Direttore Sanitario:</span> 
-                    <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong>
+                    <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong> 
+                    <span class="text-medical-light font-semibold ml-1">(Pneumologo e Allergologo)</span>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Header Navigation -->
     <header class="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm sticky top-[37px] z-40">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <a href="#home" class="flex items-center">
-                <img src="Logo-verticale-Parasanitis.png" alt="Parasanitis" class="h-20 py-1 w-auto object-contain">
+                <img src="Logo-verticale-Parasanitis.png" alt="Poliambulatorio Medico Parasanitis" class="h-20 py-1 w-auto object-contain">
             </a>
 
             <nav class="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm text-slate-700">
                 <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
-                <a href="#struttura" class="hover:text-navy-900">Il Centro</a>
+                <a href="#struttura" class="hover:text-navy-900">Il Nuovo Centro</a>
                 <a href="#specialisti" class="hover:text-navy-900">Specialisti</a>
                 <a href="#checkup" class="hover:text-navy-900">Check Up</a>
                 <a href="#convenzioni" class="hover:text-navy-900">Convenzioni</a>
+                <a href="#welfare" class="hover:text-navy-900">Welfare</a>
                 <a href="#contatti" class="hover:text-navy-900">Contatti</a>
             </nav>
 
             <div class="hidden sm:flex items-center gap-3">
                 <a href="https://alfadocs.it" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-bold bg-navy-900 hover:bg-navy-800 text-white transition-all shadow-md flex items-center gap-2">
                     <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
-                    <span>Prenota Online</span>
-                </a>
-                <!-- Tasto per passare all'Inglese -->
-                <a href="./en/" class="px-3 py-2.5 rounded-full border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5 shadow-sm">
-                    <span>🇬🇧 EN</span>
+                    <span>Prenota Online AlfaDocs</span>
                 </a>
             </div>
+
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
+            <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
+            <a href="#struttura" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Il Nuovo Centro</a>
+            <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialisti</a>
+            <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Check Up</a>
+            <a href="#convenzioni" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Convenzioni</a>
+            <a href="#welfare" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Welfare Aziendale</a>
+            <a href="#contatti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Contatti</a>
+            <a href="https://alfadocs.it" target="_blank" class="text-center py-3 bg-navy-900 text-white rounded-xl text-xs font-bold">
+                Prenota Online AlfaDocs
+            </a>
         </div>
     </header>
 
+    <!-- HERO SECTION WITH OFFICIAL SLOGAN -->
     <section id="home" class="relative py-20 md:py-32 bg-hero-overlay text-white shadow-inner">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
+                <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+                Poliambulatorio Medico Parasanitis • Bulciago (Lecco)
+            </div>
+
             <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-md">
                 Parasanitis,<br>
                 <span class="text-medical-light">specialisti nel prendersi cura di te.</span>
             </h1>
-            <p class="text-base sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-10">
-                Un’ampia gamma di prestazioni specialistiche con un’equipe qualificata ed esperta.
+
+            <p class="text-base sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                Un’ampia gamma di prestazioni specialistiche con un’equipe qualificata ed esperta in costante collaborazione.
             </p>
+
+            <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
+                <div class="relative flex flex-col sm:flex-row items-center gap-3">
+                    <div class="relative w-full flex-grow">
+                        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                        <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Cerca specialista (es. Barbera, Sala, Ortopedico...)" class="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
+                    </div>
+                    <a href="#specialisti" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 text-center flex items-center justify-center gap-2">
+                        <span>Trova Specialista</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- (Il resto della pagina italiana con i numeri, specialisti tra cui Erica Scerna e Valentina Botturi...) -->
+    <!-- SEZIONE CON RUNNING NUMBERS -->
+    <section class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                </div>
+                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
+                    <span class="counter" data-target="4500">0</span>+
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Pazienti</p>
+            </div>
 
-    <footer class="bg-navy-950 text-slate-400 py-12 px-6 text-xs border-t border-navy-800 text-center">
-        <p>Copyrights © 2026 PARASANITIS S.R.L. | Tutti i diritti riservati.</p>
+            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                </div>
+                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
+                    <span class="counter" data-target="32">0</span>
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Professionisti</p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                </div>
+                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
+                    <span class="counter" data-target="25">0</span>
+                </div>
+                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Servizi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRUCTURE SECTION -->
+    <section id="struttura" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-facility-overlay rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">I Nostri Spazi</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">Un Polo Sanitario Moderno e Avanzato</h2>
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
+                    Grazie alla collaborazione costante tra i nostri specialisti riusciamo a confrontarci tempestivamente circa le diverse problematiche presentate.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                        <span class="font-heading text-3xl font-extrabold text-medical-light block mb-1">9</span>
+                        <h4 class="font-bold text-sm text-white mb-1">Ambulatori Medici</h4>
+                        <p class="text-xs text-slate-300">Spazi attrezzati per visite ed ecografie.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                        <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-sm text-white mb-1">Palestra Fisioterapica</h4>
+                        <p class="text-xs text-slate-300">Area rieducazione motoria e funzionale.</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
+                        <i data-lucide="brain" class="w-8 h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-sm text-white mb-1">Area Psicologia</h4>
+                        <p class="text-xs text-slate-300">Studi per percorsi di supporto e sessuologia.</p>
+                    </div>
+                </div>
+
+                <a href="#specialisti" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg">
+                    <span>Scopri Tutti gli Specialisti</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHECK UP SECTION -->
+    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-checkup-overlay rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevenzione e Cura</span>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prenota Il Tuo Check Up</h2>
+                    <p class="text-slate-200 text-sm leading-relaxed mb-6">
+                        Il nostro team lavora in modo multidisciplinare per prendersi cura di te rispettando i tuoi bisogni e i tuoi obiettivi di salute.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="heart-pulse" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Angiologia</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="scan" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Ecografie</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="test-tube-2" class="w-6 h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-sm">Analisi Cliniche</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Raccontaci il tuo bisogno</h3>
+                    <p class="text-xs text-slate-500 mb-6">Ti ascolteremo e ti aiuteremo subito con appuntamenti in poco tempo.</p>
+                    <a href="#contatti" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
+                        Prenota Ora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFICIAL DOCTORS & BACK OFFICE LIST -->
+    <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica & Staff</span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Specialisti e Staff</h2>
+            <p class="text-slate-600 text-sm">
+                Presso il poliambulatorio Parasanitis di Bulciago potrai usufruire di un’ampia gamma di prestazioni specialistiche e di un supporto amministrativo dedicato.
+            </p>
+        </div>
+
+        <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">SS</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Direttore Sanitario</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Stefano Sala</h3>
+                            <p class="text-xs text-slate-500 font-medium">Pneumologo e Allergologo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ostetrica</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Margherita Barbera</h3>
+                            <p class="text-xs text-slate-500 font-medium">Ostetrica e Consulente Sessuale</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Podologia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Manuela Beccalli</h3>
+                            <p class="text-xs text-slate-500 font-medium">Podologa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">DB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Psicologia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Daniela Benez Ferreira</h3>
+                            <p class="text-xs text-slate-500 font-medium">Psicologa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">CB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Psicologia & Sessuologia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Carin Irma Blumenthal</h3>
+                            <p class="text-xs text-slate-500 font-medium">Psicologa e Sessuologa Clinica</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Dietetica</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Alice Boaretto</h3>
+                            <p class="text-xs text-slate-500 font-medium">Dietista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Massoterapia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Alessandro Cadeddu</h3>
+                            <p class="text-xs text-slate-500 font-medium">Massoterapista MCB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">DC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Massoterapia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Davide Cadeddu</h3>
+                            <p class="text-xs text-slate-500 font-medium">Massoterapista MCB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Infermeria</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Massimo Castagna</h3>
+                            <p class="text-xs text-slate-500 font-medium">Infermiere</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Osteopatia & Massoterapia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Matteo F. Cazzaniga</h3>
+                            <p class="text-xs text-slate-500 font-medium">Massoterapista MCB e Osteopata</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ortopedia & Sport</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Alessio Colombo</h3>
+                            <p class="text-xs text-slate-500 font-medium">Ortopedico e Medico dello Sport</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Oncologia & Ecografia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Massimo Cocciolo</h3>
+                            <p class="text-xs text-slate-500 font-medium">Oncologo, Internista, Ecografista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">CM</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Angiologia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Carlo Maricondi</h3>
+                            <p class="text-xs text-slate-500 font-medium">Angiologo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">JC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Logopedia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Jasmine Corti</h3>
+                            <p class="text-xs text-slate-500 font-medium">Logopedista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">CP</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Dietetica</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Claudia Paone</h3>
+                            <p class="text-xs text-slate-500 font-medium">Dietista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">ML</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Fisiatria</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Marco Limonta</h3>
+                            <p class="text-xs text-slate-500 font-medium">Fisiatra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MM</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Medicina Estetica & Agopuntura</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Marta Merlini</h3>
+                            <p class="text-xs text-slate-500 font-medium">Medico Estetico e Agopuntore</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AM</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Certificazioni & Rinnovi</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Andrea Midi</h3>
+                            <p class="text-xs text-slate-500 font-medium">Rinnovo Patenti e Porto d'Armi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AM</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Osteopatia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Agnese Milani</h3>
+                            <p class="text-xs text-slate-500 font-medium">Osteopata</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MM</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Fisioterapia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Manuele Monti</h3>
+                            <p class="text-xs text-slate-500 font-medium">Fisioterapista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">DR</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Otorinolaringoiatria</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Debora Maria Riva</h3>
+                            <p class="text-xs text-slate-500 font-medium">Otorinolaringoiatra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">VR</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ortopedia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott.ssa Valeria Rocca</h3>
+                            <p class="text-xs text-slate-500 font-medium">Ortopedico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">GR</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Fisioterapia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Giovanni Rota</h3>
+                            <p class="text-xs text-slate-500 font-medium">Fisioterapista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">GV</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Ortopedia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dott. Giovanni Vergottini</h3>
+                            <p class="text-xs text-slate-500 font-medium">Ortopedico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">NC</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Neurochirurgia</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Équipe Neurochirurghi</h3>
+                            <p class="text-xs text-slate-500 font-medium">Specialisti Colonna Vertebrale</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i><span>Prenota con AlfaDocs</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- BACK OFFICE & ADMIN CARDS -->
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">ES</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Back Office</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Erica Scerna</h3>
+                            <p class="text-xs text-slate-500 font-medium">Amministrazione</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-medical-light"></i><span>Contatta la Segreteria</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
+                <div class="p-6">
+                    <div class="flex items-center gap-4 mb-2">
+                        <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">VB</div>
+                        <div>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Back Office</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Valentina Botturi</h3>
+                            <p class="text-xs text-slate-500 font-medium">Front Office</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100">
+                    <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-medical-light"></i><span>Contatta la Segreteria</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONVENZIONI -->
+    <section id="convenzioni" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Assicurazioni & Fondi Sanitari</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Le Nostre Convenzioni</h2>
+                <p class="text-slate-600 text-sm">
+                    Il Poliambulatorio Parasanitis è convenzionato con le principali assicurazioni e network sanitari nazionali:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10">
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Blue Assistance</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Insalute</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">RB Care</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Assirete</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Allianz Health</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Salutissima</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Axa</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">My Assistance</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Cooperazione Salute</div>
+                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Salute Semplice</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WELFARE -->
+    <section id="welfare" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi per i Lavoratori</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">Welfare Aziendale Parasanitis</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                    Utilizza il tuo credito welfare aziendale per accedere a visite specialistiche, diagnostica ed esami senza anticipi di denaro.
+                </p>
+            </div>
+            <div class="lg:col-span-6 bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Piattaforme Welfare</h3>
+                <p class="text-xs text-slate-600 mb-4">Accettiamo i principali portali welfare: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou e molti altri.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Hai bisogno dei nostri servizi?</span>
+                    <h2 class="font-heading text-3xl font-bold mb-4">Sentiti libero di contattarci</h2>
+                    <div class="space-y-4 text-sm text-slate-200 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-medical-light"></i>
+                            <span>+39 375 550 6952 | +39 031 687 7590</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
+                            <span>info@parasanitis.it</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-2xl">
+                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Invia un messaggio alla Segreteria</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Messaggio inviato con successo!');">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Nome e Cognome" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+                            <input type="tel" placeholder="Telefono" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+                        </div>
+                        <textarea rows="3" placeholder="Come possiamo aiutarti?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm"></textarea>
+                        <button type="submit" class="w-full py-3 bg-navy-900 text-white font-bold text-xs uppercase rounded-xl">Invia Richiesta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+
+    <footer class="bg-navy-950 text-slate-400 py-12 px-6 text-xs border-t border-navy-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <strong class="text-white text-sm block mb-1">Parasanitis S.r.l.</strong>
+                <p>P.IVA 03826210134 | Direttore Sanitario: Dott. Stefano Sala</p>
+                <p class="text-slate-500 mt-1">REA: LC - 327398 | Cap. Sociale: € 25.000,00 | PEC: parasanitis@legalmail.it</p>
+            </div>
+            <div class="text-slate-500 text-center md:text-right">
+                <p>Copyrights © 2026 PARASANITIS S.R.L. | Tutti i diritti riservati.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
         lucide.createIcons();
+
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function searchDoctorAndScroll() {
+            const input = document.getElementById('heroDoctorSearch').value.toLowerCase();
+            const cards = document.getElementsByClassName('doctor-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const text = cards[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        // Script running numbers
+        const counters = document.querySelectorAll('.counter');
+        let animated = false;
+
+        function runCounters() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const speed = target / 50;
+
+                function updateCount() {
+                    count += speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target;
+                    }
+                }
+                updateCount();
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + window.innerHeight;
+            const targetPos = document.querySelector('.counter').getBoundingClientRect().top + window.scrollY;
+            if (!animated && scrollPos > targetPos) {
+                runCounters();
+                animated = true;
+            }
+        });
     </script>
 </body>
 </html>
