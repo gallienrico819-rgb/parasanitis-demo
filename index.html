@@ -113,16 +113,17 @@
 
     <!-- Header Navigation -->
     <header class="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm sticky top-[37px] z-40">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-20 sm:h-24 flex items-center justify-between">
             <a href="#home" class="flex items-center">
-                <img src="Logo-verticale-Parasanitis.png" alt="Poliambulatorio Medico Parasanitis" class="h-20 py-1 w-auto object-contain">
+                <img src="Logo-verticale-Parasanitis.png" alt="Poliambulatorio Medico Parasanitis" class="h-16 sm:h-20 py-1 w-auto object-contain">
             </a>
 
             <nav class="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm text-slate-700">
                 <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
+                <a href="#esami-ematici" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Esami del Sangue</a>
                 <a href="#struttura" class="hover:text-navy-900">Il Nuovo Centro</a>
                 <a href="#specialisti" class="hover:text-navy-900">Specialisti</a>
-                <a href="#esami-ematici" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Esami del Sangue</a>
+                <a href="#partner" class="hover:text-navy-900">Partner</a>
                 <a href="#checkup" class="hover:text-navy-900">Check Up</a>
                 <a href="#convenzioni" class="hover:text-navy-900">Convenzioni</a>
                 <a href="#welfare" class="hover:text-navy-900">Welfare</a>
@@ -143,9 +144,10 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
+            <a href="#esami-ematici" onclick="toggleMobileMenu()" class="text-sm font-bold text-red-600">Esami del Sangue</a>
             <a href="#struttura" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Il Nuovo Centro</a>
             <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialisti</a>
-            <a href="#esami-ematici" onclick="toggleMobileMenu()" class="text-sm font-bold text-red-600">Esami del Sangue</a>
+            <a href="#partner" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Partner</a>
             <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Check Up</a>
             <a href="#convenzioni" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Convenzioni</a>
             <a href="#welfare" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Welfare Aziendale</a>
@@ -161,142 +163,71 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="relative py-20 md:py-32 bg-hero-overlay text-white shadow-inner">
+    <section id="home" class="relative py-12 md:py-28 bg-hero-overlay text-white shadow-inner">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-medical-light text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 backdrop-blur-md">
                 <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
                 Poliambulatorio Medico Parasanitis • Bulciago (Lecco)
             </div>
 
-            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-md">
+            <h1 class="font-heading text-2xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-3 sm:mb-4 text-white drop-shadow-md">
                 Parasanitis,<br>
                 <span class="text-medical-light">specialisti nel prendersi cura di te.</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p class="text-xs sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
                 Un’ampia gamma di prestazioni specialistiche con un’equipe qualificata ed esperta in costante collaborazione interdisciplinare.
             </p>
 
-            <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
-                <div class="relative flex flex-col sm:flex-row items-center gap-3">
-                    <div class="relative w-full flex-grow">
-                        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                        <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Cerca specialista (es. Barbera, Sala, Ortopedico...)" class="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
+            <div class="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
+                <div class="relative flex flex-col gap-3">
+                    <div class="relative w-full">
+                        <i data-lucide="search" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 absolute left-3.5 top-3 sm:top-3.5"></i>
+                        <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Cerca specialista (es. Barbera, Sala, Ortopedico...)" class="w-full bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-xs sm:text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
                     </div>
-                    <a href="#specialisti" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 text-center flex items-center justify-center gap-2">
-                        <span>Trova Specialista</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                    
+                    <!-- 2 SEPARATE BUTTONS BELOW SEARCH BAR -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <a href="#specialisti" class="w-full px-5 py-3 rounded-xl sm:rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all text-center flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="search" class="w-4 h-4"></i>
+                            <span>Trova Specialista</span>
+                        </a>
+                        <a href="https://alfadocs.it" target="_blank" class="w-full px-5 py-3 rounded-xl sm:rounded-2xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all text-center flex items-center justify-center gap-2 shadow-md shadow-red-600/30">
+                            <i data-lucide="droplet" class="w-4 h-4 fill-current"></i>
+                            <span>Prenota Esame del Sangue</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RUNNING NUMBERS STATS -->
-    <section class="py-16 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
-                    <i data-lucide="users" class="w-6 h-6"></i>
-                </div>
-                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
-                    <span class="counter" data-target="4500">0</span>+
-                </div>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Pazienti</p>
-            </div>
-
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
-                    <i data-lucide="user-check" class="w-6 h-6"></i>
-                </div>
-                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
-                    <span class="counter" data-target="32">0</span>
-                </div>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Professionisti</p>
-            </div>
-
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
-                    <i data-lucide="stethoscope" class="w-6 h-6"></i>
-                </div>
-                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
-                    <span class="counter" data-target="25">0</span>
-                </div>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Servizi</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- STRUCTURE SECTION WITH CLICKABLE GYM CARD -->
-    <section id="struttura" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="bg-facility-overlay rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
-            <div class="max-w-3xl">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">I Nostri Spazi</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">Un Polo Sanitario Moderno e Avanzato a Bulciago</h2>
-                <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
-                    Grazie alla collaborazione costante tra i nostri specialisti riusciamo a confrontarci tempestivamente circa le diverse problematiche cliniche presentate dai pazienti, garantendo percorsi terapeutici mirati e integrati.
-                </p>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
-                        <span class="font-heading text-3xl font-extrabold text-medical-light block mb-1">9</span>
-                        <h4 class="font-bold text-sm text-white mb-1">Ambulatori Medici</h4>
-                        <p class="text-xs text-slate-300">Spazi altamente attrezzati per visite specialistiche ed ecografie.</p>
-                    </div>
-
-                    <!-- CLICKABLE GYM CARD -->
-                    <div onclick="openGymModal()" class="bg-white/15 hover:bg-white/25 backdrop-blur-md p-5 rounded-2xl border-2 border-medical-light/60 transition-all cursor-pointer group shadow-lg">
-                        <div class="flex items-center justify-between mb-2">
-                            <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light group-hover:scale-110 transition-transform"></i>
-                            <span class="text-[10px] bg-medical-light/30 text-white font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                                <i data-lucide="camera" class="w-3 h-3"></i> Foto
-                            </span>
-                        </div>
-                        <h4 class="font-bold text-sm text-white mb-1 group-hover:text-medical-light transition-colors">Palestra Fisioterapica</h4>
-                        <p class="text-xs text-slate-300">Clicca per guardare le foto della palestra e dell'area riabilitativa.</p>
-                    </div>
-
-                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
-                        <i data-lucide="brain" class="w-8 h-8 text-medical-light mb-2"></i>
-                        <h4 class="font-bold text-sm text-white mb-1">Area Psicologia</h4>
-                        <p class="text-xs text-slate-300">Studi riservati per percorsi di supporto e sessuologia.</p>
-                    </div>
-                </div>
-
-                <a href="#specialisti" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg">
-                    <span>Scopri Tutti gli Specialisti</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW DEDICATED RED BLOOD TEST SECTION (ESAMI EMATICI) -->
-    <section id="esami-ematici" class="py-12 px-6 max-w-7xl mx-auto">
-        <div class="bg-blood-overlay rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border-2 border-red-400/30">
+    <!-- COMPACT RED BLOOD TEST BANNER (DESKTOP ONLY) -->
+    <section id="esami-ematici" class="hidden sm:block py-6 px-6 max-w-7xl mx-auto">
+        <div class="bg-blood-overlay rounded-3xl p-8 text-white shadow-xl relative overflow-hidden border border-red-400/30">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-8">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-md border border-white/20">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider mb-3 backdrop-blur-md border border-white/20">
                         <i data-lucide="droplet" class="w-4 h-4 text-red-200 fill-current"></i>
                         Punto prelievi ematici
                     </div>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold mb-3 text-white">
+                    <h2 class="font-heading text-3xl font-extrabold mb-2 text-white">
                         Prenota i tuoi esami ematici
                     </h2>
                     <p class="text-red-100 text-base font-bold mb-3 uppercase tracking-wide">
                         Salti la coda e decidi il tuo orario
                     </p>
-                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
+                    <p class="text-slate-200 text-sm leading-relaxed max-w-2xl">
                         Presso il Poliambulatorio Parasanitis puoi effettuare tutti gli esami ematici e di laboratorio con accesso rapido programmato. Prenota direttamente online l'orario a te più comodo su AlfaDocs ed evita ogni tipo di attesa.
                     </p>
                 </div>
-                <div class="lg:col-span-4 bg-white/95 backdrop-blur-md text-slate-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-red-100 text-center">
+                <div class="lg:col-span-4 bg-white/95 backdrop-blur-md text-slate-900 p-6 rounded-2xl shadow-lg border border-red-100 text-center">
                     <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
                         <i data-lucide="clock" class="w-6 h-6"></i>
                     </div>
                     <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Zero Coda, Zero Attese</h3>
                     <p class="text-xs text-slate-600 mb-6">Seleziona la data e l'orario per il tuo prelievo in pochissimi clic.</p>
-                    <a href="https://alfadocs.it" target="_blank" class="w-full py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-lg shadow-red-600/30 flex items-center justify-center gap-2">
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md shadow-red-600/30 flex items-center justify-center gap-2">
                         <i data-lucide="calendar" class="w-4 h-4"></i>
                         <span>Prenota Esami del Sangue</span>
                     </a>
@@ -305,35 +236,183 @@
         </div>
     </section>
 
+    <!-- RUNNING NUMBERS STATS (8000 PAZIENTI, 42 PROFESSIONISTI) -->
+    <section class="py-10 sm:py-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="users" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
+                    <span class="counter" data-target="8000">0</span>+
+                </div>
+                <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Pazienti</p>
+            </div>
+
+            <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="user-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
+                    <span class="counter" data-target="42">0</span>
+                </div>
+                <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Professionisti</p>
+            </div>
+
+            <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="stethoscope" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
+                    <span class="counter" data-target="25">0</span>
+                </div>
+                <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Servizi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRUCTURE SECTION (8 AMBULATORI + OZONOTERAPIA) -->
+    <section id="struttura" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="bg-facility-overlay rounded-2xl sm:rounded-3xl p-6 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">I Nostri Spazi</span>
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">Un Polo Sanitario Moderno e Avanzato a Bulciago</h2>
+                <p class="text-slate-200 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8">
+                    Grazie alla collaborazione costante tra i nostri specialisti riusciamo a confrontarci tempestivamente circa le diverse problematiche cliniche presentate dai pazienti, garantendo percorsi terapeutici mirati e integrati.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15">
+                        <span class="font-heading text-2xl sm:text-3xl font-extrabold text-medical-light block mb-1">8</span>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1">Ambulatori Medici</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Spazi altamente attrezzati per visite specialistiche ed ecografie.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15">
+                        <i data-lucide="sparkles" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1">Ozonoterapia</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Ambulatorio dedicato ai trattamenti antinfiammatori e lenitivi.</p>
+                    </div>
+
+                    <!-- CLICKABLE GYM CARD -->
+                    <div onclick="openGymModal()" class="bg-white/15 hover:bg-white/25 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border-2 border-medical-light/60 transition-all cursor-pointer group shadow-lg">
+                        <div class="flex items-center justify-between mb-2">
+                            <i data-lucide="dumbbell" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light group-hover:scale-110 transition-transform"></i>
+                            <span class="text-[10px] bg-medical-light/30 text-white font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="camera" class="w-3 h-3"></i> Foto
+                            </span>
+                        </div>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1 group-hover:text-medical-light transition-colors">Palestra Fisioterapica</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Guarda le foto della palestra e dell'area riabilitativa.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15">
+                        <i data-lucide="brain" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1">Area Psicologia</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Studi riservati per percorsi di supporto e sessuologia.</p>
+                    </div>
+                </div>
+
+                <a href="#specialisti" class="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg">
+                    <span>Scopri Tutti gli Specialisti</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: I NOSTRI PARTNER -->
+    <section id="partner" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Eccellenze del Territorio</span>
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">I Nostri Partner</h2>
+            <p class="text-slate-600 text-xs sm:text-sm">
+                Collaboriamo con le migliori realtà del territorio per offrire un servizio sanitario completo e integrato direttamente presso la nostra struttura.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- PARTNER 1: ORTOPEDIA CASTAGNA -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                        <div class="w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
+                            <!-- PLACEHOLDER LOGO ORTOPEDIA CASTAGNA -->
+                            <i data-lucide="bone" class="w-8 h-8 text-navy-900"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-navy-900">Ortopedia Castagna</h3>
+                            <span class="text-xs text-medical-accent font-semibold uppercase">Presidi & Ausili Ortopedici</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                        Tramite l'Ortopedia Castagna, rinomata ortopedia della provincia di Lecco, siamo in grado di offrire direttamente in ambulatorio tutti gli ausili necessari in ambito ortopedico: <strong>tutori, cavigliere, ginocchiere, calze contenitive</strong> e tutto ciò che è inerente all'ambito del mondo ortopedico.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 mt-4">
+                    <a href="#contatti" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-medical-accent transition-colors">
+                        <span>Richiedi informazioni in segreteria</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PARTNER 2: AMPLIFON -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                        <div class="w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
+                            <!-- PLACEHOLDER LOGO AMPLIFON -->
+                            <i data-lucide="ear" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-navy-900">Amplifon</h3>
+                            <span class="text-xs text-red-600 font-semibold uppercase">Soluzioni per l'Udito</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                        Tramite Amplifon effettuiamo <strong>visite audiometriche gratuite</strong> direttamente in ambulatorio o a domicilio del paziente. Siamo in grado di offrire apparecchi acustici su misura per ogni specifica esigenza.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 mt-4">
+                    <a href="#contatti" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-red-600 transition-colors">
+                        <span>Prenota test audiometrico gratuito</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CHECK UP SECTION -->
-    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="bg-checkup-overlay rounded-3xl p-8 sm:p-12 text-white shadow-xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <section id="checkup" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="bg-checkup-overlay rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 <div class="lg:col-span-7">
                     <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevenzione e Cura</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Prenota Il Tuo Check Up Personalizzato</h2>
-                    <p class="text-slate-200 text-sm leading-relaxed mb-6">
+                    <h2 class="font-heading text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Prenota Il Tuo Check Up Personalizzato</h2>
+                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-6">
                         Il nostro team lavora in modo multidisciplinare per prendersi cura di te rispettando i tuoi bisogni clinici e i tuoi obiettivi di benessere e salute a lungo termine.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
-                            <i data-lucide="heart-pulse" class="w-6 h-6 text-medical-light shrink-0"></i>
-                            <span class="font-bold text-sm">Angiologia</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                        <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="heart-pulse" class="w-5 h-5 sm:w-6 sm:h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-xs sm:text-sm">Angiologia</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
-                            <i data-lucide="scan" class="w-6 h-6 text-medical-light shrink-0"></i>
-                            <span class="font-bold text-sm">Ecografie</span>
+                        <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="scan" class="w-5 h-5 sm:w-6 sm:h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-xs sm:text-sm">Ecografie</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
-                            <i data-lucide="test-tube-2" class="w-6 h-6 text-medical-light shrink-0"></i>
-                            <span class="font-bold text-sm">Analisi Cliniche</span>
+                        <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="test-tube-2" class="w-5 h-5 sm:w-6 sm:h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-xs sm:text-sm">Analisi Cliniche</span>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Raccontaci il tuo bisogno</h3>
+                <div class="lg:col-span-5 bg-white text-slate-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl text-center shadow-lg">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-2">Raccontaci il tuo bisogno</h3>
                     <p class="text-xs text-slate-500 mb-6">Ti ascolteremo con attenzione e ti aiuteremo subito con appuntamenti in tempi rapidi.</p>
-                    <a href="#contatti" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
+                    <a href="#contatti" class="w-full py-3.5 sm:py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
                         Prenota Ora
                     </a>
                 </div>
@@ -342,16 +421,16 @@
     </section>
 
     <!-- OFFICIAL DOCTORS & STAFF (FULL 27 CARDS) -->
-    <section id="specialisti" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-12">
+    <section id="specialisti" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica & Staff</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">I Nostri Specialisti e Staff</h2>
-            <p class="text-slate-600 text-sm">
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">I Nostri Specialisti e Staff</h2>
+            <p class="text-slate-600 text-xs sm:text-sm">
                 Presso il poliambulatorio Parasanitis di Bulciago potrai usufruire di un’ampia gamma di prestazioni specialistiche e di un supporto amministrativo e di segreteria altamente dedicato.
             </p>
         </div>
 
-        <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
             <!-- 1. Dott. Stefano Sala -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
@@ -897,79 +976,79 @@
     </section>
 
     <!-- CONVENZIONI -->
-    <section id="convenzioni" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
+    <section id="convenzioni" class="py-12 sm:py-16 px-6 bg-slate-100 border-t border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-12">
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
                 <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Assicurazioni & Fondi Sanitari</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Le Nostre Convenzioni</h2>
-                <p class="text-slate-600 text-sm">
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">Le Nostre Convenzioni</h2>
+                <p class="text-slate-600 text-xs sm:text-sm">
                     Il Poliambulatorio Parasanitis è convenzionato con le principali compagnie assicurative e network sanitari nazionali:
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10">
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Blue Assistance</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Insalute</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">RB Care</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Assirete</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Allianz Health</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Salutissima</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Axa</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">My Assistance</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Cooperazione Salute</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Salute Semplice</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 mb-8 sm:mb-10">
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Blue Assistance</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Insalute</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">RB Care</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Assirete</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Allianz Health</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Salutissima</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Axa</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">My Assistance</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Cooperazione Salute</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Salute Semplice</div>
             </div>
         </div>
     </section>
 
     <!-- WELFARE AZIENDALE -->
-    <section id="welfare" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="welfare" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
             <div class="lg:col-span-6">
                 <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Servizi per i Lavoratori</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">Welfare Aziendale Parasanitis</h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-4 sm:mb-6">Welfare Aziendale Parasanitis</h2>
+                <p class="text-slate-600 text-xs sm:text-base leading-relaxed mb-4">
                     Utilizza il tuo credito welfare aziendale per accedere a visite specialistiche, diagnostica ed esami senza anticipi di denaro, con gestione diretta delle pratiche.
                 </p>
             </div>
-            <div class="lg:col-span-6 bg-slate-50 p-8 rounded-3xl border border-slate-200">
-                <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Piattaforme Welfare Accettate</h3>
+            <div class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200">
+                <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-3 sm:mb-4">Piattaforme Welfare Accettate</h3>
                 <p class="text-xs text-slate-600 mb-4 leading-relaxed">Collaboriamo con i principali portali welfare nazionali: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou e molti altri ancora.</p>
             </div>
         </div>
     </section>
 
     <!-- CONTATTI -->
-    <section id="contatti" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
-        <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section id="contatti" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="bg-navy-900 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
                 <div class="lg:col-span-5">
                     <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Hai bisogno dei nostri servizi?</span>
-                    <h2 class="font-heading text-3xl font-bold mb-4">Sentiti libero di contattarci</h2>
-                    <div class="space-y-4 text-sm text-slate-200 mb-8">
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold mb-4">Sentiti libero di contattarci</h2>
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-200 mb-6 sm:mb-8">
                         <div class="flex items-center gap-3">
-                            <i data-lucide="phone" class="w-5 h-5 text-medical-light"></i>
+                            <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 text-medical-light"></i>
                             <span>+39 375 550 6952 | +39 031 687 7590</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
+                            <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 text-medical-light"></i>
                             <span>info@parasanitis.it</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-medical-light"></i>
+                            <i data-lucide="map-pin" class="w-4 h-4 sm:w-5 sm:h-5 text-medical-light"></i>
                             <span>Via Sant'Agostino 57, 23892 Bulciago (LC)</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-2xl">
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Invia un messaggio alla Segreteria</h3>
+                <div class="lg:col-span-7 bg-white text-slate-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-4">Invia un messaggio alla Segreteria</h3>
                     <form class="space-y-4" onsubmit="event.preventDefault(); alert('Messaggio inviato con successo!');">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Nome e Cognome" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
-                            <input type="tel" placeholder="Telefono" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+                            <input type="text" placeholder="Nome e Cognome" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm">
+                            <input type="tel" placeholder="Telefono" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm">
                         </div>
-                        <textarea rows="3" placeholder="Come possiamo aiutarti?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm"></textarea>
+                        <textarea rows="3" placeholder="Come possiamo aiutarti?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm"></textarea>
                         <button type="submit" class="w-full py-3 bg-navy-900 text-white font-bold text-xs uppercase rounded-xl">Invia Richiesta</button>
                     </form>
                 </div>
