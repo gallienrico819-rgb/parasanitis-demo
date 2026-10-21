@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parasanitis Medical Centre | Specialists in Caring for You</title>
+    <title>Parasanitis Medical Center | Specialists dedicated to your care</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,11 +80,11 @@
 </head>
 <body class="antialiased selection:bg-medical-accent selection:text-white">
 
-    <!-- Top Info Bar with Dual Language Switcher (Routes back to ../index.html) -->
+    <!-- Top Info Bar with Dual Language Switcher -->
     <div class="bg-navy-950 text-white text-xs py-2.5 px-6 border-b border-navy-800 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
             <div class="flex items-center gap-6 text-slate-300">
-                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC)</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-medical-light"></i> Via Sant'Agostino 57, Bulciago (LC), Italy</span>
                 <span class="hidden lg:flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-medical-light"></i> +39 375 550 6952 | +39 031 687 7590</span>
             </div>
             
@@ -94,7 +94,7 @@
                     <div class="text-[11px]">
                         <span class="text-slate-400 font-medium">Medical Director:</span> 
                         <strong class="text-white font-bold ml-1">Dr. Stefano Sala</strong> 
-                        <span class="text-medical-light font-semibold ml-1">(Pneumologist & Allergist)</span>
+                        <span class="text-medical-light font-semibold ml-1">(Pulmonologist & Allergist)</span>
                     </div>
                 </div>
 
@@ -113,26 +113,27 @@
 
     <!-- Header Navigation -->
     <header class="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm sticky top-[37px] z-40">
-        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 h-20 sm:h-24 flex items-center justify-between">
             <a href="#home" class="flex items-center">
-                <img src="../Logo-verticale-Parasanitis.png" alt="Parasanitis Medical Centre" class="h-20 py-1 w-auto object-contain">
+                <img src="../Logo-verticale-Parasanitis.png" alt="Poliambulatorio Medico Parasanitis" class="h-16 sm:h-20 py-1 w-auto object-contain">
             </a>
 
             <nav class="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm text-slate-700">
                 <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
-                <a href="#facility" class="hover:text-navy-900">Our Centre</a>
-                <a href="#specialists" class="hover:text-navy-900">Specialists</a>
-                <a href="#blood-tests" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Blood Tests</a>
-                <a href="#checkup" class="hover:text-navy-900">Health Checkups</a>
-                <a href="#partnerships" class="hover:text-navy-900">Partnerships</a>
+                <a href="#esami-ematici" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Blood Tests</a>
+                <a href="#struttura" class="hover:text-navy-900">The Center</a>
+                <a href="#specialisti" class="hover:text-navy-900">Specialists</a>
+                <a href="#partner" class="hover:text-navy-900">Partners</a>
+                <a href="#checkup" class="hover:text-navy-900">Check-Up</a>
+                <a href="#convenzioni" class="hover:text-navy-900">Insurance</a>
                 <a href="#welfare" class="hover:text-navy-900">Corporate Welfare</a>
-                <a href="#contact" class="hover:text-navy-900">Contact</a>
+                <a href="#contatti" class="hover:text-navy-900">Contact</a>
             </nav>
 
             <div class="flex items-center gap-3">
                 <a href="https://alfadocs.it" target="_blank" class="px-5 py-2.5 rounded-full text-xs font-bold bg-navy-900 hover:bg-navy-800 text-white transition-all shadow-md flex items-center gap-2">
                     <i data-lucide="calendar" class="w-4 h-4 text-medical-light"></i>
-                    <span>Book Online via AlfaDocs</span>
+                    <span>Book Online AlfaDocs</span>
                 </a>
             </div>
 
@@ -143,15 +144,16 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
-            <a href="#facility" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Our Centre</a>
-            <a href="#specialists" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialists</a>
-            <a href="#blood-tests" onclick="toggleMobileMenu()" class="text-sm font-bold text-red-600">Blood Tests</a>
-            <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Health Checkups</a>
-            <a href="#partnerships" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Partnerships</a>
+            <a href="#esami-ematici" onclick="toggleMobileMenu()" class="text-sm font-bold text-red-600">Blood Tests</a>
+            <a href="#struttura" onclick="toggleMobileMenu()" class="text-sm text-slate-700">The Center</a>
+            <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialists</a>
+            <a href="#partner" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Partners</a>
+            <a href="#checkup" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Check-Up</a>
+            <a href="#convenzioni" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Insurance</a>
             <a href="#welfare" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Corporate Welfare</a>
-            <a href="#contact" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Contact</a>
+            <a href="#contatti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Contact</a>
             <a href="https://alfadocs.it" target="_blank" class="text-center py-3 bg-navy-900 text-white rounded-xl text-xs font-bold">
-                Book Online via AlfaDocs
+                Book Online AlfaDocs
             </a>
             <div class="flex justify-center gap-2 pt-2 border-t border-slate-100">
                 <a href="../index.html" class="px-4 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-xs font-bold">🇮🇹 IT</a>
@@ -161,142 +163,71 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section id="home" class="relative py-20 md:py-32 bg-hero-overlay text-white shadow-inner">
+    <section id="home" class="relative py-12 md:py-28 bg-hero-overlay text-white shadow-inner">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-medical-light text-xs font-semibold mb-6 backdrop-blur-md">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-medical-light text-[11px] sm:text-xs font-semibold mb-4 sm:mb-6 backdrop-blur-md">
                 <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
-                Parasanitis Medical Centre • Bulciago (Lecco)
+                Parasanitis Medical Center • Bulciago (Lecco)
             </div>
 
-            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white drop-shadow-md">
+            <h1 class="font-heading text-2xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-3 sm:mb-4 text-white drop-shadow-md">
                 Parasanitis,<br>
-                <span class="text-medical-light">specialists in caring for you.</span>
+                <span class="text-medical-light">specialists dedicated to your care.</span>
             </h1>
 
-            <p class="text-base sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-                A broad spectrum of specialized medical healthcare services delivered by a highly qualified team working in close interdisciplinary collaboration.
+            <p class="text-xs sm:text-lg text-slate-200 font-light max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+                A comprehensive range of specialist medical services delivered by a qualified and experienced team working in close cross-disciplinary collaboration.
             </p>
 
-            <div class="bg-white p-3 sm:p-4 rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
-                <div class="relative flex flex-col sm:flex-row items-center gap-3">
-                    <div class="relative w-full flex-grow">
-                        <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                        <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Search specialist or medical discipline..." class="w-full bg-slate-50 border border-slate-200 rounded-2xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
+            <div class="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-2xl max-w-3xl mx-auto text-slate-800 border-2 border-medical-light/50">
+                <div class="relative flex flex-col gap-3">
+                    <div class="relative w-full">
+                        <i data-lucide="search" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 absolute left-3.5 top-3 sm:top-3.5"></i>
+                        <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Search specialist (e.g., Barbera, Sala, Orthopedist...)" class="w-full bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-xs sm:text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
                     </div>
-                    <a href="#specialists" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 text-center flex items-center justify-center gap-2">
-                        <span>Find Specialist</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                    
+                    <!-- 2 SEPARATE BUTTONS BELOW SEARCH BAR -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <a href="#specialisti" class="w-full px-5 py-3 rounded-xl sm:rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all text-center flex items-center justify-center gap-2 shadow-sm">
+                            <i data-lucide="search" class="w-4 h-4"></i>
+                            <span>Find Specialist</span>
+                        </a>
+                        <a href="https://alfadocs.it" target="_blank" class="w-full px-5 py-3 rounded-xl sm:rounded-2xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all text-center flex items-center justify-center gap-2 shadow-md shadow-red-600/30">
+                            <i data-lucide="droplet" class="w-4 h-4 fill-current"></i>
+                            <span>Book Blood Test</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="py-16 bg-white border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
-                    <i data-lucide="users" class="w-6 h-6"></i>
-                </div>
-                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
-                    <span class="counter" data-target="4500">0</span>+
-                </div>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Patients Treated</p>
-            </div>
-
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
-                    <i data-lucide="user-check" class="w-6 h-6"></i>
-                </div>
-                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
-                    <span class="counter" data-target="32">0</span>
-                </div>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Medical Professionals</p>
-            </div>
-
-            <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
-                <div class="w-12 h-12 mx-auto mb-4 rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
-                    <i data-lucide="stethoscope" class="w-6 h-6"></i>
-                </div>
-                <div class="font-heading text-4xl sm:text-5xl font-extrabold text-navy-900 mb-2">
-                    <span class="counter" data-target="25">0</span>
-                </div>
-                <p class="text-xs uppercase font-bold tracking-widest text-slate-500">Specialities & Services</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FACILITY SECTION WITH CLICKABLE GYM CARD -->
-    <section id="facility" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="bg-facility-overlay rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
-            <div class="max-w-3xl">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Our Facilities</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-6">A Modern Healthcare Hub in Bulciago</h2>
-                <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-8">
-                    Continuous collaboration between our specialists enables prompt case evaluations and highly tailored, integrated clinical pathways.
-                </p>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
-                        <span class="font-heading text-3xl font-extrabold text-medical-light block mb-1">9</span>
-                        <h4 class="font-bold text-sm text-white mb-1">Medical Suites</h4>
-                        <p class="text-xs text-slate-300">Fully equipped for consultations and ultrasounds.</p>
-                    </div>
-
-                    <!-- CLICKABLE GYM CARD -->
-                    <div onclick="openGymModal()" class="bg-white/15 hover:bg-white/25 backdrop-blur-md p-5 rounded-2xl border-2 border-medical-light/60 transition-all cursor-pointer group shadow-lg">
-                        <div class="flex items-center justify-between mb-2">
-                            <i data-lucide="dumbbell" class="w-8 h-8 text-medical-light group-hover:scale-110 transition-transform"></i>
-                            <span class="text-[10px] bg-medical-light/30 text-white font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                                <i data-lucide="camera" class="w-3 h-3"></i> Photos
-                            </span>
-                        </div>
-                        <h4 class="font-bold text-sm text-white mb-1 group-hover:text-medical-light transition-colors">Physiotherapy Gym</h4>
-                        <p class="text-xs text-slate-300">Click to view photos of our rehab gym and facilities.</p>
-                    </div>
-
-                    <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/15">
-                        <i data-lucide="brain" class="w-8 h-8 text-medical-light mb-2"></i>
-                        <h4 class="font-bold text-sm text-white mb-1">Psychology Suites</h4>
-                        <p class="text-xs text-slate-300">Private consulting rooms for therapy and sexology.</p>
-                    </div>
-                </div>
-
-                <a href="#specialists" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg">
-                    <span>Explore All Specialists</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW DEDICATED RED BLOOD TEST SECTION -->
-    <section id="blood-tests" class="py-12 px-6 max-w-7xl mx-auto">
-        <div class="bg-blood-overlay rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border-2 border-red-400/30">
+    <!-- COMPACT RED BLOOD TEST BANNER (DESKTOP ONLY) -->
+    <section id="esami-ematici" class="hidden sm:block py-6 px-6 max-w-7xl mx-auto">
+        <div class="bg-blood-overlay rounded-3xl p-8 text-white shadow-xl relative overflow-hidden border border-red-400/30">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div class="lg:col-span-8">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider mb-4 backdrop-blur-md border border-white/20">
+                    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-white text-xs font-bold uppercase tracking-wider mb-3 backdrop-blur-md border border-white/20">
                         <i data-lucide="droplet" class="w-4 h-4 text-red-200 fill-current"></i>
-                        Blood Sampling Station
+                        Blood Collection Point
                     </div>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-extrabold mb-3 text-white">
+                    <h2 class="font-heading text-3xl font-extrabold mb-2 text-white">
                         Book Your Blood Tests
                     </h2>
                     <p class="text-red-100 text-base font-bold mb-3 uppercase tracking-wide">
-                        Skip the queue and select your preferred time slot
+                        Skip the queue and choose your preferred time slot
                     </p>
-                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed max-w-2xl">
-                        At Parasanitis Medical Centre, you can undergo routine blood tests and lab analyses with scheduled priority access. Book online directly via AlfaDocs to select your convenient time and avoid queueing.
+                    <p class="text-slate-200 text-sm leading-relaxed max-w-2xl">
+                        At Parasanitis Medical Center you can carry out all blood and laboratory tests with fast-track scheduled access. Book your preferred time directly online via AlfaDocs and avoid waiting in line.
                     </p>
                 </div>
-                <div class="lg:col-span-4 bg-white/95 backdrop-blur-md text-slate-900 p-6 sm:p-8 rounded-2xl shadow-xl border border-red-100 text-center">
+                <div class="lg:col-span-4 bg-white/95 backdrop-blur-md text-slate-900 p-6 rounded-2xl shadow-lg border border-red-100 text-center">
                     <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-3">
                         <i data-lucide="clock" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Zero Queue, Zero Delays</h3>
-                    <p class="text-xs text-slate-600 mb-6">Select your appointment date and time in just a few clicks.</p>
-                    <a href="https://alfadocs.it" target="_blank" class="w-full py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-lg shadow-red-600/30 flex items-center justify-center gap-2">
+                    <h3 class="font-heading text-lg font-bold text-navy-900 mb-1">Zero Wait Times</h3>
+                    <p class="text-xs text-slate-600 mb-6">Select your date and time for blood collection in just a few clicks.</p>
+                    <a href="https://alfadocs.it" target="_blank" class="w-full py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md shadow-red-600/30 flex items-center justify-center gap-2">
                         <i data-lucide="calendar" class="w-4 h-4"></i>
                         <span>Book Blood Tests</span>
                     </a>
@@ -305,35 +236,181 @@
         </div>
     </section>
 
-    <!-- HEALTH CHECKUP SECTION -->
-    <section id="checkup" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="bg-checkup-overlay rounded-3xl p-8 sm:p-12 text-white shadow-xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <!-- RUNNING NUMBERS STATS (8000 PATIENTS, 42 PROFESSIONALS) -->
+    <section class="py-10 sm:py-12 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="users" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
+                    <span class="counter" data-target="8000">0</span>+
+                </div>
+                <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Patients</p>
+            </div>
+
+            <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="user-check" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
+                    <span class="counter" data-target="42">0</span>
+                </div>
+                <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Professionals</p>
+            </div>
+
+            <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl sm:rounded-2xl bg-medical-light/10 text-medical-accent flex items-center justify-center">
+                    <i data-lucide="stethoscope" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                </div>
+                <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
+                    <span class="counter" data-target="25">0</span>
+                </div>
+                <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Services</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRUCTURE SECTION (8 AMBULATORI + OZONE THERAPY) -->
+    <section id="struttura" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="bg-facility-overlay rounded-2xl sm:rounded-3xl p-6 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+            <div class="max-w-3xl">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Our Facilities</span>
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold mb-4 sm:mb-6">A Modern and Advanced Medical Hub in Bulciago</h2>
+                <p class="text-slate-200 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8">
+                    Thanks to constant collaboration among our specialists, we promptly address complex clinical cases to guarantee targeted and integrated therapeutic pathways.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15">
+                        <span class="font-heading text-2xl sm:text-3xl font-extrabold text-medical-light block mb-1">8</span>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1">Medical Rooms</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Fully equipped spaces for specialist consultations and ultrasounds.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15">
+                        <i data-lucide="sparkles" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1">Ozone Therapy</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Dedicated ambulatory suite for anti-inflammatory treatments.</p>
+                    </div>
+
+                    <!-- CLICKABLE GYM CARD -->
+                    <div onclick="openGymModal()" class="bg-white/15 hover:bg-white/25 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border-2 border-medical-light/60 transition-all cursor-pointer group shadow-lg">
+                        <div class="flex items-center justify-between mb-2">
+                            <i data-lucide="dumbbell" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light group-hover:scale-110 transition-transform"></i>
+                            <span class="text-[10px] bg-medical-light/30 text-white font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                <i data-lucide="camera" class="w-3 h-3"></i> Photos
+                            </span>
+                        </div>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1 group-hover:text-medical-light transition-colors">Physiotherapy Gym</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Click to view photos of the rehab gym area.</p>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/15">
+                        <i data-lucide="brain" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light mb-2"></i>
+                        <h4 class="font-bold text-xs sm:text-sm text-white mb-1">Psychology Suite</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300">Private consulting rooms for counseling and sexology.</p>
+                    </div>
+                </div>
+
+                <a href="#specialisti" class="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-medical-light hover:bg-medical-accent text-navy-950 font-bold text-xs uppercase tracking-wider transition-all shadow-lg">
+                    <span>Discover All Specialists</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: OUR PARTNERS -->
+    <section id="partner" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Local Excellence</span>
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">Our Partners</h2>
+            <p class="text-slate-600 text-xs sm:text-sm">
+                We partner with leading regional experts to provide a comprehensive and integrated healthcare experience directly within our clinic.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- PARTNER 1: ORTOPEDIA CASTAGNA -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                        <div class="w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
+                            <i data-lucide="bone" class="w-8 h-8 text-navy-900"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-navy-900">Ortopedia Castagna</h3>
+                            <span class="text-xs text-medical-accent font-semibold uppercase">Orthopedic Braces & Aids</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+                        Through Ortopedia Castagna, a renowned orthopedic provider in Lecco province, we offer all necessary orthopedic aids directly at our clinic: <strong>braces, ankle supports, knee braces, compression stockings</strong>, and all specialized orthopedic products.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 mt-4">
+                    <a href="#contatti" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-medical-accent transition-colors">
+                        <span>Inquire at reception</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PARTNER 2: AMPLIFON -->
+            <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
+                        <div class="w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
+                            <i data-lucide="ear" class="w-8 h-8 text-red-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-navy-900">Amplifon</h3>
+                            <span class="text-xs text-red-600 font-semibold uppercase">Hearing Solutions</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Through Amplifon we perform <strong>free hearing tests (audiometric examinations)</strong> directly at the clinic or at the patient's home, providing custom hearing aid solutions for every need.
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-100 mt-4">
+                    <a href="#contatti" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-red-600 transition-colors">
+                        <span>Book free hearing test</span>
+                        <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHECK UP SECTION -->
+    <section id="checkup" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="bg-checkup-overlay rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
                 <div class="lg:col-span-7">
                     <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Prevention & Care</span>
-                    <h2 class="font-heading text-3xl sm:text-4xl font-bold mb-4">Book Your Personalized Health Checkup</h2>
-                    <p class="text-slate-200 text-sm leading-relaxed mb-6">
-                        Our multidisciplinary team works together to fulfill your clinical needs and support your long-term health and wellbeing goals.
+                    <h2 class="font-heading text-2xl sm:text-4xl font-bold mb-3 sm:mb-4">Book Your Personalized Check-Up</h2>
+                    <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-6">
+                        Our multidisciplinary team works closely to look after your health, addressing your clinical needs and long-term wellness goals.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
-                            <i data-lucide="heart-pulse" class="w-6 h-6 text-medical-light shrink-0"></i>
-                            <span class="font-bold text-sm">Angiology</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                        <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="heart-pulse" class="w-5 h-5 sm:w-6 sm:h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-xs sm:text-sm">Angiology</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
-                            <i data-lucide="scan" class="w-6 h-6 text-medical-light shrink-0"></i>
-                            <span class="font-bold text-sm">Ultrasounds</span>
+                        <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="scan" class="w-5 h-5 sm:w-6 sm:h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-xs sm:text-sm">Ultrasound</span>
                         </div>
-                        <div class="p-4 rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
-                            <i data-lucide="test-tube-2" class="w-6 h-6 text-medical-light shrink-0"></i>
-                            <span class="font-bold text-sm">Clinical Labs</span>
+                        <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/10 border border-white/10 backdrop-blur-md flex items-center gap-3">
+                            <i data-lucide="test-tube-2" class="w-5 h-5 sm:w-6 sm:h-6 text-medical-light shrink-0"></i>
+                            <span class="font-bold text-xs sm:text-sm">Clinical Labs</span>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-5 bg-white text-slate-800 p-8 rounded-2xl text-center shadow-lg">
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-2">Tell Us Your Needs</h3>
-                    <p class="text-xs text-slate-500 mb-6">We listen carefully and arrange rapid appointment schedules for you.</p>
-                    <a href="#contact" class="w-full py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
+                <div class="lg:col-span-5 bg-white text-slate-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl text-center shadow-lg">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-2">Tell us your needs</h3>
+                    <p class="text-xs text-slate-500 mb-6">We listen attentively and assist you promptly with rapid appointment scheduling.</p>
+                    <a href="#contatti" class="w-full py-3.5 sm:py-4 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all block text-center shadow-md">
                         Book Now
                     </a>
                 </div>
@@ -341,18 +418,17 @@
         </div>
     </section>
 
-    <!-- DOCTORS & STAFF (FULL 27 CARDS) -->
-    <section id="specialists" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Medical Team & Administrative Staff</span>
-            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Our Specialists & Staff</h2>
-            <p class="text-slate-600 text-sm">
-                At Parasanitis Medical Centre in Bulciago, you benefit from a complete range of expert consultations and dedicated patient support.
+    <!-- OFFICIAL DOCTORS & STAFF -->
+    <section id="specialisti" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Medical Team & Staff</span>
+            <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">Our Specialists & Staff</h2>
+            <p class="text-slate-600 text-xs sm:text-sm">
+                At Parasanitis Medical Center in Bulciago you can access a wide array of specialist services backed by a dedicated administrative and secretarial team.
             </p>
         </div>
 
-        <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+        <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <!-- 1. Dr. Stefano Sala -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
@@ -361,10 +437,10 @@
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Medical Director</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Dr. Stefano Sala</h3>
-                            <p class="text-xs text-slate-500 font-medium">Pneumologist & Allergist</p>
+                            <p class="text-xs text-slate-500 font-medium">Pulmonologist & Allergist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specialized in the diagnosis and management of respiratory diseases, asthma, complex allergies, and pulmonary conditions.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specialized in the diagnosis and treatment of respiratory conditions, asthma, allergies, and advanced pulmonary disorders.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -373,18 +449,18 @@
                 </div>
             </div>
 
-            <!-- 2. Dr. Margherita Barbera -->
+            <!-- 2. Dr.ssa Margherita Barbera -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MB</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Midwifery & Sexology</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Margherita Barbera</h3>
-                            <p class="text-xs text-slate-500 font-medium">Midwife & Sex Consultant</p>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Midwife</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Margherita Barbera</h3>
+                            <p class="text-xs text-slate-500 font-medium">Midwife & Sexological Counselor</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Maternal care, antenatal classes, pelvic floor rehabilitation, and clinical sexology consultations.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Maternity support, childbirth preparation cycles, pelvic floor rehabilitation, and clinical sexology consultations.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -393,18 +469,18 @@
                 </div>
             </div>
 
-            <!-- 3. Dr. Manuela Beccalli -->
+            <!-- 3. Dr.ssa Manuela Beccalli -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MB</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Podiatry</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Manuela Beccalli</h3>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Manuela Beccalli</h3>
                             <p class="text-xs text-slate-500 font-medium">Podiatrist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Treatment of foot disorders, biomechanical evaluations, ingrown toenails, and diabetic foot care.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Treatment of foot pathologies, biomechanical evaluations, ingrown toenail care, and diabetic foot prevention.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -413,18 +489,18 @@
                 </div>
             </div>
 
-            <!-- 4. Dr. Daniela Benez Ferreira -->
+            <!-- 4. Dr.ssa Daniela Benez Ferreira -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">DB</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Psychology</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Daniela Benez Ferreira</h3>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Daniela Benez Ferreira</h3>
                             <p class="text-xs text-slate-500 font-medium">Psychologist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Individual psychological support, anxiety and stress management, and personal development therapy.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Individual psychological support paths, anxiety and stress management, and personal growth counseling.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -433,18 +509,18 @@
                 </div>
             </div>
 
-            <!-- 5. Dr. Carin Irma Blumenthal -->
+            <!-- 5. Dr.ssa Carin Irma Blumenthal -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">CB</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Psychology & Sexology</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Carin Irma Blumenthal</h3>
-                            <p class="text-xs text-slate-500 font-medium">Clinical Psychologist & Sexologist</p>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Carin Irma Blumenthal</h3>
+                            <p class="text-xs text-slate-500 font-medium">Psychologist & Clinical Sexologist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Clinical sexology and psychological therapy for individuals and couples resolving relational blocks.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Psychological and clinical sexology counseling for individuals and couples aimed at overcoming emotional and relational blocks.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -453,18 +529,18 @@
                 </div>
             </div>
 
-            <!-- 6. Dr. Alice Boaretto -->
+            <!-- 6. Dr.ssa Alice Boaretto -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AB</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Dietetics</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Alice Boaretto</h3>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Alice Boaretto</h3>
                             <p class="text-xs text-slate-500 font-medium">Dietitian</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Personalized nutritional plans, nutritional education, and dietary therapy for metabolic conditions.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Personalized nutritional plans, dietary education, and nutritional support for metabolic disorders.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -479,12 +555,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AC</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Massage Therapy</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Massotherapy</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Alessandro Cadeddu</h3>
-                            <p class="text-xs text-slate-500 font-medium">MCB Massage Therapist</p>
+                            <p class="text-xs text-slate-500 font-medium">MCB Massotherapist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Decontracting, sports, and rehabilitative massage therapy for muscle and joint recovery.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Decontracting, sports, and rehabilitative massotherapy treatments for muscular and joint recovery.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -499,12 +575,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">DC</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Massage Therapy</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Massotherapy</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Davide Cadeddu</h3>
-                            <p class="text-xs text-slate-500 font-medium">MCB Massage Therapist</p>
+                            <p class="text-xs text-slate-500 font-medium">MCB Massotherapist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Manual therapy targeting spinal pain, muscle contractures, and chronic tension.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Manual therapies focused on treating spinal pain, contractures, and chronic or acute muscle tension.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -519,12 +595,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MC</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Nursing Services</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Nursing</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Massimo Castagna</h3>
-                            <p class="text-xs text-slate-500 font-medium">Registered Nurse</p>
+                            <p class="text-xs text-slate-500 font-medium">Nurse</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Outpatient nursing care, wound dressing, injections, vital sign monitoring, and ECGs.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Outpatient nursing services, dressings, injections, vital sign monitoring, and electrocardiograms.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -539,12 +615,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MC</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Osteopathy & Massage Therapy</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Osteopathy & Massotherapy</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Matteo F. Cazzaniga</h3>
-                            <p class="text-xs text-slate-500 font-medium">Osteopath & Massage Therapist</p>
+                            <p class="text-xs text-slate-500 font-medium">MCB Massotherapist & Osteopath</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Structural and visceral osteopathic care combined with advanced massage techniques for postural health.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Structural and visceral osteopathic treatments combined with advanced massotherapy techniques for postural wellness.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -559,12 +635,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AC</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Orthopaedics & Sports Medicine</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Orthopedics & Sports</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Dr. Alessio Colombo</h3>
-                            <p class="text-xs text-slate-500 font-medium">Orthopaedic Surgeon & Sports Doctor</p>
+                            <p class="text-xs text-slate-500 font-medium">Orthopedist & Sports Physician</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Orthopaedic consultations, sports injury management, joint injections, and prosthetic surgery.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specialist orthopedic evaluations, sports injuries, joint infiltrations, and prosthetic and arthroscopic surgery.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -579,12 +655,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MC</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Oncology & Ultrasonography</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Oncology & Ultrasound</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Dr. Massimo Cocciolo</h3>
-                            <p class="text-xs text-slate-500 font-medium">Oncologist, Internist, Sonographer</p>
+                            <p class="text-xs text-slate-500 font-medium">Oncologist, Internist, Ultrasonographer</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Oncology consultations, internal medicine, diagnostic abdominal ultrasounds, and precision diagnostics.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Oncological consultations, internal medicine, internal ultrasound scans, and precision instrumental diagnostics.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -604,7 +680,7 @@
                             <p class="text-xs text-slate-500 font-medium">Angiologist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Non-invasive vascular diagnostics, Color Doppler ultrasounds for supra-aortic trunks and limb vasculature.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Non-invasive vascular diagnostics, color Doppler ultrasound of supra-aortic trunks and lower/upper limbs.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -613,18 +689,18 @@
                 </div>
             </div>
 
-            <!-- 14. Dr. Jasmine Corti -->
+            <!-- 14. Dr.ssa Jasmine Corti -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">JC</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Speech Therapy</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Jasmine Corti</h3>
-                            <p class="text-xs text-slate-500 font-medium">Speech & Language Therapist</p>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Jasmine Corti</h3>
+                            <p class="text-xs text-slate-500 font-medium">Speech Therapist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Prevention and treatment of voice, speech, communication, and swallowing disorders in children and adults.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Prevention and treatment of voice, language, communication, and swallowing disorders in children and adults.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -633,18 +709,18 @@
                 </div>
             </div>
 
-            <!-- 15. Dr. Claudia Paone -->
+            <!-- 15. Dr.ssa Claudia Paone -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">CP</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Dietetics</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Claudia Paone</h3>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Claudia Paone</h3>
                             <p class="text-xs text-slate-500 font-medium">Dietitian</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Nutritional status evaluation, tailored clinical diets, and long-term healthy lifestyle counseling.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Nutritional assessment, custom clinical diets formulation, and nutritional education programs.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -664,7 +740,7 @@
                             <p class="text-xs text-slate-500 font-medium">Physiatrist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Physical medicine and rehabilitation, functional motor evaluations, and prescription of therapy protocols.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Physical medicine and rehabilitation, functional assessment, and prescription of targeted physiotherapy pathways.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -673,18 +749,18 @@
                 </div>
             </div>
 
-            <!-- 17. Dr. Marta Merlini -->
+            <!-- 17. Dr.ssa Marta Merlini -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">MM</div>
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Aesthetic Medicine & Acupuncture</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Marta Merlini</h3>
-                            <p class="text-xs text-slate-500 font-medium">Aesthetic Doctor & Acupuncturist</p>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Marta Merlini</h3>
+                            <p class="text-xs text-slate-500 font-medium">Aesthetic Physician & Acupuncturist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Non-invasive aesthetic procedures and medical acupuncture for pain management and holistic health.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Non-invasive aesthetic medicine treatments and medical acupuncture sessions for pain relief and psychophysical wellness.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -699,12 +775,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">AM</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Medical Licensing & Renewals</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Certifications & Renewals</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Dr. Andrea Midi</h3>
-                            <p class="text-xs text-slate-500 font-medium">Driving & Firearms License Renewals</p>
+                            <p class="text-xs text-slate-500 font-medium">Driving License & Firearms License Renewals</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Official legal medical examinations for driving licenses, gun permits, and official certifications.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Legal and specialist medical examinations for driver license renewals, firearm licenses, and official certifications.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -724,7 +800,7 @@
                             <p class="text-xs text-slate-500 font-medium">Osteopath</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Osteopathic adjustments targeting joint dysfunctions, cervical pain, low back pain, and postural strain.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Osteopathic treatments targeting joint blocks, cervical pain, lower back pain, and postural imbalances.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -744,7 +820,7 @@
                             <p class="text-xs text-slate-500 font-medium">Physiotherapist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Orthopaedic, post-surgical, and neuromuscular rehabilitation using manual therapy and physical agents.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Orthopedic, post-surgical, and neuromuscular rehabilitation using manual techniques and electromedical devices.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -753,18 +829,18 @@
                 </div>
             </div>
 
-            <!-- 21. Dr. Debora Maria Riva -->
+            <!-- 21. Dr.ssa Debora Maria Riva -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">DR</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Otolaryngology (ENT)</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Debora Maria Riva</h3>
-                            <p class="text-xs text-slate-500 font-medium">ENT Specialist</p>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Otolaryngology</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Debora Maria Riva</h3>
+                            <p class="text-xs text-slate-500 font-medium">ENT Specialist (Otolaryngologist)</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Diagnosis and care for ear, nose, and throat disorders, dizziness, tinnitus, and hearing impairment.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Diagnostics and treatment of ear, nose, and throat conditions, vertigo, tinnitus, and hearing disorders.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -773,18 +849,18 @@
                 </div>
             </div>
 
-            <!-- 22. Dr. Valeria Rocca -->
+            <!-- 22. Dr.ssa Valeria Rocca -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">VR</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Orthopaedics</span>
-                            <h3 class="font-heading text-base font-bold text-navy-900">Dr. Valeria Rocca</h3>
-                            <p class="text-xs text-slate-500 font-medium">Orthopaedic Specialist</p>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Orthopedics</span>
+                            <h3 class="font-heading text-base font-bold text-navy-900">Dr.ssa Valeria Rocca</h3>
+                            <p class="text-xs text-slate-500 font-medium">Orthopedic Surgeon</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specialist in musculoskeletal system disorders, conservative joint care, and expert clinical evaluations.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Specialist in musculoskeletal disorders, orthopedic consultations, and conservative treatments.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -804,7 +880,7 @@
                             <p class="text-xs text-slate-500 font-medium">Physiotherapist</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Tailored physical rehabilitation treatments designed for restoring full joint and motor functionality.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Personalized rehabilitative physiotherapy paths for restoring full motor functionality.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -819,12 +895,12 @@
                     <div class="flex items-center gap-4 mb-2">
                         <div class="w-14 h-14 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center font-bold text-lg border border-navy-100 shrink-0">GV</div>
                         <div>
-                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Orthopaedics</span>
+                            <span class="text-[10px] font-bold text-medical-accent uppercase block">Orthopedics</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Dr. Giovanni Vergottini</h3>
-                            <p class="text-xs text-slate-500 font-medium">Orthopaedic Surgeon</p>
+                            <p class="text-xs text-slate-500 font-medium">Orthopedic Surgeon</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Minimally invasive orthopaedic surgery, traumatology, and specialized joint treatment plans.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Minimally invasive orthopedic surgery, traumatology, and specialist joint treatments.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -833,7 +909,7 @@
                 </div>
             </div>
 
-            <!-- 25. Neurosurgery Team -->
+            <!-- 25. Neurosurgeons Team -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -841,10 +917,10 @@
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Neurosurgery</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Neurosurgery Team</h3>
-                            <p class="text-xs text-slate-500 font-medium">Spinal Disease Specialists</p>
+                            <p class="text-xs text-slate-500 font-medium">Spine Specialists</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Advanced neurosurgical consultations for herniated discs, spinal disorders, and nervous system conditions.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Advanced neurosurgical evaluations for herniated discs, spinal pathologies, and nervous system disorders.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
                     <a href="https://alfadocs.it" target="_blank" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
@@ -864,11 +940,11 @@
                             <p class="text-xs text-slate-500 font-medium">Administration</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Administrative coordination, invoicing, health fund management, and insurance direct-billing services.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Administrative management, billing, relations with supplemental health funds, and partnered insurance.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
-                    <a href="#contact" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4 text-medical-light"></i><span>Contact Administration</span>
+                    <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-medical-light"></i><span>Contact Reception</span>
                     </a>
                 </div>
             </div>
@@ -881,13 +957,13 @@
                         <div>
                             <span class="text-[10px] font-bold text-medical-accent uppercase block">Back Office</span>
                             <h3 class="font-heading text-base font-bold text-navy-900">Valentina Botturi</h3>
-                            <p class="text-xs text-slate-500 font-medium">Front Desk & Reception</p>
+                            <p class="text-xs text-slate-500 font-medium">Front Office</p>
                         </div>
                     </div>
-                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Patient reception, medical appointment scheduling, telephone desk management, and general inquiries.</p>
+                    <p class="text-xs text-slate-600 mt-3 leading-relaxed">Patient reception, medical agenda coordination, telephone bookings, and information desk.</p>
                 </div>
                 <div class="p-4 bg-slate-50 border-t border-slate-100">
-                    <a href="#contact" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
+                    <a href="#contatti" class="w-full py-2.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white transition-all text-xs font-bold flex items-center justify-center gap-2">
                         <i data-lucide="phone" class="w-4 h-4 text-medical-light"></i><span>Contact Reception</span>
                     </a>
                 </div>
@@ -896,81 +972,81 @@
         </div>
     </section>
 
-    <!-- PARTNERSHIPS -->
-    <section id="partnerships" class="py-20 px-6 bg-slate-100 border-t border-b border-slate-200">
+    <!-- INSURANCE & PARTNERS -->
+    <section id="convenzioni" class="py-12 sm:py-16 px-6 bg-slate-100 border-t border-b border-slate-200">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Insurances & Health Funds</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-4">Our Direct Partnerships</h2>
-                <p class="text-slate-600 text-sm">
-                    Parasanitis Medical Centre maintains direct agreement networks with leading national healthcare insurance providers:
+            <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Insurance & Health Funds</span>
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-3 sm:mb-4">Our Insurances & Partnerships</h2>
+                <p class="text-slate-600 text-xs sm:text-sm">
+                    Parasanitis Medical Center is partnered with major national insurance companies and healthcare networks:
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-10">
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Blue Assistance</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Insalute</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">RB Care</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Assirete</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Allianz Health</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Salutissima</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Axa</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">My Assistance</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Cooperazione Salute</div>
-                <div class="p-5 bg-navy-900 text-white rounded-2xl border border-navy-800 text-center font-bold text-sm shadow-md flex items-center justify-center">Salute Semplice</div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 mb-8 sm:mb-10">
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Blue Assistance</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Insalute</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">RB Care</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Assirete</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Allianz Health</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Salutissima</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Axa</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">My Assistance</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Cooperazione Salute</div>
+                <div class="p-4 sm:p-5 bg-navy-900 text-white rounded-xl sm:rounded-2xl border border-navy-800 text-center font-bold text-xs sm:text-sm shadow-md flex items-center justify-center">Salute Semplice</div>
             </div>
         </div>
     </section>
 
     <!-- CORPORATE WELFARE -->
-    <section id="welfare" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <section id="welfare" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
             <div class="lg:col-span-6">
-                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Corporate Solutions</span>
-                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">Parasanitis Corporate Welfare</h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-                    Utilize your employee welfare credits for specialist consultations, health checkups, and diagnostic procedures without upfront out-of-pocket costs.
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Services for Workers</span>
+                <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-4 sm:mb-6">Parasanitis Corporate Welfare</h2>
+                <p class="text-slate-600 text-xs sm:text-base leading-relaxed mb-4">
+                    Use your corporate welfare credits to access specialist visits, diagnostics, and exams without any upfront out-of-pocket costs, with direct administrative processing.
                 </p>
             </div>
-            <div class="lg:col-span-6 bg-slate-50 p-8 rounded-3xl border border-slate-200">
-                <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Accepted Welfare Platforms</h3>
-                <p class="text-xs text-slate-600 mb-4 leading-relaxed">We accept all major corporate welfare networks: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou, and many others.</p>
+            <div class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200">
+                <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-3 sm:mb-4">Accepted Welfare Platforms</h3>
+                <p class="text-xs text-slate-600 mb-4 leading-relaxed">We collaborate with major national welfare portals: Edenred, Easy Welfare, Pellegrini, TreCruori, DoubleYou, and many others.</p>
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
-        <div class="bg-navy-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section id="contatti" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="bg-navy-900 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-white shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
                 <div class="lg:col-span-5">
-                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Need Assistance?</span>
-                    <h2 class="font-heading text-3xl font-bold mb-4">Get in Touch with Us</h2>
-                    <div class="space-y-4 text-sm text-slate-200 mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-2">Need our services?</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl font-bold mb-4">Feel free to contact us</h2>
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-200 mb-6 sm:mb-8">
                         <div class="flex items-center gap-3">
-                            <i data-lucide="phone" class="w-5 h-5 text-medical-light"></i>
+                            <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 text-medical-light"></i>
                             <span>+39 375 550 6952 | +39 031 687 7590</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 text-medical-light"></i>
+                            <i data-lucide="mail" class="w-4 h-4 sm:w-5 sm:h-5 text-medical-light"></i>
                             <span>info@parasanitis.it</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-medical-light"></i>
+                            <i data-lucide="map-pin" class="w-4 h-4 sm:w-5 sm:h-5 text-medical-light"></i>
                             <span>Via Sant'Agostino 57, 23892 Bulciago (LC), Italy</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 bg-white text-slate-800 p-8 rounded-2xl">
-                    <h3 class="font-heading text-xl font-bold text-navy-900 mb-4">Send a Message to Reception</h3>
+                <div class="lg:col-span-7 bg-white text-slate-800 p-6 sm:p-8 rounded-xl sm:rounded-2xl">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-4">Send a message to our Reception</h3>
                     <form class="space-y-4" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Full Name" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
-                            <input type="tel" placeholder="Phone Number" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm">
+                            <input type="text" placeholder="Full Name" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm">
+                            <input type="tel" placeholder="Phone Number" required class="bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm">
                         </div>
-                        <textarea rows="3" placeholder="How can we assist you?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm"></textarea>
-                        <button type="submit" class="w-full py-3 bg-navy-900 text-white font-bold text-xs uppercase rounded-xl">Submit Enquiry</button>
+                        <textarea rows="3" placeholder="How can we help you?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm"></textarea>
+                        <button type="submit" class="w-full py-3 bg-navy-900 text-white font-bold text-xs uppercase rounded-xl">Send Request</button>
                     </form>
                 </div>
             </div>
@@ -978,7 +1054,7 @@
     </section>
 
     <!-- WHATSAPP FLOATING BUTTON -->
-    <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float" aria-label="WhatsApp Chat">
+    <a href="https://wa.me/393755506952" target="_blank" class="whatsapp-float" aria-label="Chat WhatsApp">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
@@ -987,7 +1063,7 @@
         <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 relative shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
             <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
                 <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block">Rehabilitation Suite</span>
+                    <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block">Rehabilitation Area</span>
                     <h3 class="font-heading text-xl font-bold text-navy-900">Parasanitis Physiotherapy Gym</h3>
                 </div>
                 <button onclick="closeGymModal()" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-all">
@@ -997,12 +1073,12 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 overflow-y-auto pr-1">
                 <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Physiotherapy Gym Equipment" class="w-full h-56 object-cover">
-                    <div class="p-3 bg-slate-50 text-xs text-slate-600 font-medium">State-of-the-art motor and functional rehabilitation equipment</div>
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Physiotherapy Equipment" class="w-full h-56 object-cover">
+                    <div class="p-3 bg-slate-50 text-xs text-slate-600 font-medium">Modern equipment for motor and functional re-education</div>
                 </div>
                 <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Manual Therapy Suite" class="w-full h-56 object-cover">
-                    <div class="p-3 bg-slate-50 text-xs text-slate-600 font-medium">Dedicated spaces for physiotherapy and manual massage treatments</div>
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Manual Therapy Area" class="w-full h-56 object-cover">
+                    <div class="p-3 bg-slate-50 text-xs text-slate-600 font-medium">Dedicated spaces for physiotherapy and massotherapy treatments</div>
                 </div>
             </div>
 
@@ -1017,8 +1093,8 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
                 <strong class="text-white text-sm block mb-1">Parasanitis S.r.l.</strong>
-                <p>VAT ID: 03826210134 | Medical Director: Dr. Stefano Sala</p>
-                <p class="text-slate-500 mt-1">REA: LC - 327398 | Share Capital: € 25,000.00 | PEC: parasanitis@legalmail.it</p>
+                <p>VAT: 03826210134 | Medical Director: Dr. Stefano Sala</p>
+                <p class="text-slate-500 mt-1">REA: LC - 327398 | Share Capital: € 25,000.00 | Certified Email (PEC): parasanitis@legalmail.it</p>
             </div>
             <div class="text-slate-500 text-center md:text-right">
                 <p>Copyright © 2026 PARASANITIS S.R.L. | All rights reserved.</p>
