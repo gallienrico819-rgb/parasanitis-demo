@@ -186,7 +186,6 @@
                         <input type="text" id="heroDoctorSearch" onkeyup="searchDoctorAndScroll()" placeholder="Cerca specialista (es. Barbera, Sala, Ortopedico...)" class="w-full bg-slate-50 border border-slate-200 rounded-xl sm:rounded-2xl pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-xs sm:text-sm focus:outline-none focus:border-navy-900 text-slate-900 font-medium">
                     </div>
                     
-                    <!-- 2 SEPARATE BUTTONS BELOW SEARCH BAR -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                         <a href="#specialisti" class="w-full px-5 py-3 rounded-xl sm:rounded-2xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all text-center flex items-center justify-center gap-2 shadow-sm">
                             <i data-lucide="search" class="w-4 h-4"></i>
@@ -236,7 +235,7 @@
         </div>
     </section>
 
-    <!-- RUNNING NUMBERS STATS (8000 PAZIENTI, 42 PROFESSIONISTI) -->
+    <!-- RUNNING NUMBERS STATS -->
     <section class="py-10 sm:py-12 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
@@ -271,7 +270,7 @@
         </div>
     </section>
 
-    <!-- STRUCTURE SECTION (8 AMBULATORI + OZONOTERAPIA) -->
+    <!-- STRUCTURE SECTION -->
     <section id="struttura" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
         <div class="bg-facility-overlay rounded-2xl sm:rounded-3xl p-6 sm:p-14 text-white shadow-2xl relative overflow-hidden">
             <div class="max-w-3xl">
@@ -294,7 +293,6 @@
                         <p class="text-[11px] sm:text-xs text-slate-300">Ambulatorio dedicato ai trattamenti antinfiammatori e lenitivi.</p>
                     </div>
 
-                    <!-- CLICKABLE GYM CARD -->
                     <div onclick="openGymModal()" class="bg-white/15 hover:bg-white/25 backdrop-blur-md p-4 sm:p-5 rounded-xl sm:rounded-2xl border-2 border-medical-light/60 transition-all cursor-pointer group shadow-lg">
                         <div class="flex items-center justify-between mb-2">
                             <i data-lucide="dumbbell" class="w-6 h-6 sm:w-8 sm:h-8 text-medical-light group-hover:scale-110 transition-transform"></i>
@@ -321,7 +319,7 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: I NOSTRI PARTNER -->
+    <!-- SECTION: I NOSTRI PARTNER CON LOGHI REALI -->
     <section id="partner" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Eccellenze del Territorio</span>
@@ -337,8 +335,7 @@
                 <div>
                     <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
                         <div class="w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
-                            <!-- PLACEHOLDER LOGO ORTOPEDIA CASTAGNA -->
-                            <i data-lucide="bone" class="w-8 h-8 text-navy-900"></i>
+                            <img src="https://www.ortopediacastagna.it/wp-content/uploads/2021/03/logo-ortopedia-castagna.png" alt="Ortopedia Castagna Logo" class="max-h-full max-w-full object-contain">
                         </div>
                         <div>
                             <h3 class="font-heading text-xl font-bold text-navy-900">Ortopedia Castagna</h3>
@@ -362,8 +359,7 @@
                 <div>
                     <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
                         <div class="w-16 h-16 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-center p-2 shrink-0">
-                            <!-- PLACEHOLDER LOGO AMPLIFON -->
-                            <i data-lucide="ear" class="w-8 h-8 text-red-600"></i>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Amplifon_logo.svg" alt="Amplifon Logo" class="max-h-full max-w-full object-contain">
                         </div>
                         <div>
                             <h3 class="font-heading text-xl font-bold text-navy-900">Amplifon</h3>
@@ -420,7 +416,7 @@
         </div>
     </section>
 
-    <!-- OFFICIAL DOCTORS & STAFF (FULL 27 CARDS) -->
+    <!-- OFFICIAL DOCTORS & STAFF -->
     <section id="specialisti" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Équipe Medica & Staff</span>
@@ -431,7 +427,6 @@
         </div>
 
         <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
             <!-- 1. Dott. Stefano Sala -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
@@ -932,7 +927,7 @@
                 </div>
             </div>
 
-            <!-- 26. Erica Scerna (Back Office) -->
+            <!-- 26. Erica Scerna -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -952,7 +947,7 @@
                 </div>
             </div>
 
-            <!-- 27. Valentina Botturi (Back Office) -->
+            <!-- 27. Valentina Botturi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -971,7 +966,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -1013,7 +1007,7 @@
             </div>
             <div class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200">
                 <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-3 sm:mb-4">Piattaforme Welfare Accettate</h3>
-                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Collaboriamo con i principali portali welfare nazionali: Edenred, Easy Welfare, Pellegrini, TreCuori, DoubleYou e molti altri ancora.</p>
+                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Collaboriamo con i principali portali welfare nazionali: Edenred, Easy Welfare, Pellegrini, TreCruori, DoubleYou e molti altri ancora.</p>
             </div>
         </div>
     </section>
