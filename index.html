@@ -89,16 +89,14 @@
             </div>
             
             <div class="flex items-center gap-4">
-                <div class="hidden sm:flex items-center bg-navy-900 border border-medical-light/30 px-3.5 py-1 rounded-full text-right">
-                    <i data-lucide="shield-check" class="w-4 h-4 text-medical-light mr-2 shrink-0"></i>
-                    <div class="text-[11px]">
-                        <span class="text-slate-400 font-medium">Direttore Sanitario:</span> 
-                        <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong> 
-                        <span class="text-medical-light font-semibold ml-1">(Pneumologo e Allergologo)</span>
+                <div class="flex items-center bg-navy-900 border border-medical-light/30 px-3 py-1 rounded-full text-right">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-medical-light mr-1.5 shrink-0"></i>
+                    <div class="text-[10px] sm:text-[11px]">
+                        <span class="text-slate-400 font-medium">Dir. Sanitario:</span> 
+                        <strong class="text-white font-bold ml-1">Dott. Stefano Sala</strong>
                     </div>
                 </div>
 
-                <!-- IT / EN TOGGLE BUTTONS -->
                 <div class="flex items-center bg-navy-900 border border-slate-700 rounded-full p-1 gap-1 shadow-inner">
                     <a href="./index.html" class="bg-medical-accent text-white font-bold px-3 py-1 rounded-full text-xs transition-all shadow-sm flex items-center gap-1">
                         <span>🇮🇹 IT</span>
@@ -120,6 +118,7 @@
 
             <nav class="hidden md:flex items-center gap-6 font-medium text-xs lg:text-sm text-slate-700">
                 <a href="#home" class="hover:text-navy-900 font-semibold text-navy-900">Home</a>
+                <a href="#chi-siamo" class="hover:text-navy-900">Chi Siamo</a>
                 <a href="#esami-ematici" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Esami del Sangue</a>
                 <a href="#struttura" class="hover:text-navy-900">Il Nuovo Centro</a>
                 <a href="#specialisti" class="hover:text-navy-900">Specialisti</a>
@@ -144,6 +143,7 @@
 
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex flex-col gap-4">
             <a href="#home" onclick="toggleMobileMenu()" class="text-sm font-semibold text-navy-900">Home</a>
+            <a href="#chi-siamo" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Chi Siamo</a>
             <a href="#esami-ematici" onclick="toggleMobileMenu()" class="text-sm font-bold text-red-600">Esami del Sangue</a>
             <a href="#struttura" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Il Nuovo Centro</a>
             <a href="#specialisti" onclick="toggleMobileMenu()" class="text-sm text-slate-700">Specialisti</a>
@@ -201,7 +201,78 @@
         </div>
     </section>
 
-    <!-- COMPACT RED BLOOD TEST BANNER (DESKTOP ONLY) -->
+    <!-- SECTION: CHI SIAMO (ABOUT US) -->
+    <section id="chi-siamo" class="py-16 sm:py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80" alt="Poliambulatorio Parasanitis Bulciago" class="w-full h-[420px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <span class="text-xs font-bold uppercase tracking-widest text-medical-light block mb-1">Bulciago (Lecco)</span>
+                        <h3 class="font-heading text-lg font-bold">Un punto di riferimento per la salute in Brianza</h3>
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-navy-900 text-white p-6 rounded-2xl shadow-xl hidden sm:block border border-navy-800">
+                    <div class="font-heading text-3xl font-extrabold text-medical-light">40+</div>
+                    <div class="text-xs font-medium text-slate-300">Specialisti al tuo servizio</div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Chi Siamo</span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy-900 mb-6">
+                    Eccellenza medica, centralità della persona e approccio multidisciplinare.
+                </h2>
+                
+                <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                    <p>
+                        Il <strong>Poliambulatorio Medico Parasanitis</strong> nasce a Bulciago con un obiettivo chiaro: offrire al territorio un polo sanitario d'eccellenza dove la medicina specialistica incontra l'attenzione autentica per la persona.
+                    </p>
+                    <p>
+                        Crediamo che la salute non sia semplicemente l'assenza di malattia, ma uno stato di benessere completo. Per questo motivo, la nostra struttura unisce oltre 40 professionisti ed esperti nei diversi settori della medicina — dalla pneumologia all'ortopedia, dalla fisioterapia alla psicologia e diagnostica per immagini.
+                    </p>
+                    <p>
+                        Ciò che rende unico Parasanitis è la <strong>stretta collaborazione interdisciplinare</strong> tra i nostri medici: ogni caso clinico complesso viene valutato in modo sinergico, riducendo i tempi di diagnosi e garantendo percorsi terapeutici su misura, chiari e risolutivi.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5 text-medical-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-navy-900">Zero Attese</h4>
+                            <p class="text-[11px] text-slate-500">Prenotazioni rapide e flessibili</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center shrink-0">
+                            <i data-lucide="users" class="w-5 h-5 text-medical-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-navy-900">Équipe Integrata</h4>
+                            <p class="text-[11px] text-slate-500">Confronto clinico continuo</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy-50 text-navy-900 flex items-center justify-center shrink-0">
+                            <i data-lucide="heart" class="w-5 h-5 text-medical-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-navy-900">Ascolto Attivo</h4>
+                            <p class="text-[11px] text-slate-500">La persona al centro delle cure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPACT RED BLOOD TEST BANNER -->
     <section id="esami-ematici" class="hidden sm:block py-6 px-6 max-w-7xl mx-auto">
         <div class="bg-blood-overlay rounded-3xl p-8 text-white shadow-xl relative overflow-hidden border border-red-400/30">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -330,7 +401,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- PARTNER 1: ORTOPEDIA CASTAGNA -->
             <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
@@ -354,7 +424,6 @@
                 </div>
             </div>
 
-            <!-- PARTNER 2: AMPLIFON -->
             <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
@@ -427,7 +496,6 @@
         </div>
 
         <div id="doctorsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <!-- 1. Dott. Stefano Sala -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -447,7 +515,6 @@
                 </div>
             </div>
 
-            <!-- 2. Dott.ssa Margherita Barbera -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -467,7 +534,6 @@
                 </div>
             </div>
 
-            <!-- 3. Dott.ssa Manuela Beccalli -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -487,7 +553,6 @@
                 </div>
             </div>
 
-            <!-- 4. Dott.ssa Daniela Benez Ferreira -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -507,7 +572,6 @@
                 </div>
             </div>
 
-            <!-- 5. Dott.ssa Carin Irma Blumenthal -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -527,7 +591,6 @@
                 </div>
             </div>
 
-            <!-- 6. Dott.ssa Alice Boaretto -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -547,7 +610,6 @@
                 </div>
             </div>
 
-            <!-- 7. Alessandro Cadeddu -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -567,7 +629,6 @@
                 </div>
             </div>
 
-            <!-- 8. Davide Cadeddu -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -587,7 +648,6 @@
                 </div>
             </div>
 
-            <!-- 9. Massimo Castagna -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -607,7 +667,6 @@
                 </div>
             </div>
 
-            <!-- 10. Matteo F. Cazzaniga -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -627,7 +686,6 @@
                 </div>
             </div>
 
-            <!-- 11. Dott. Alessio Colombo -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -647,7 +705,6 @@
                 </div>
             </div>
 
-            <!-- 12. Dott. Massimo Cocciolo -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -667,7 +724,6 @@
                 </div>
             </div>
 
-            <!-- 13. Dott. Carlo Maricondi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -687,7 +743,6 @@
                 </div>
             </div>
 
-            <!-- 14. Dott.ssa Jasmine Corti -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -707,7 +762,6 @@
                 </div>
             </div>
 
-            <!-- 15. Dott.ssa Claudia Paone -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -727,7 +781,6 @@
                 </div>
             </div>
 
-            <!-- 16. Dott. Marco Limonta -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -747,7 +800,6 @@
                 </div>
             </div>
 
-            <!-- 17. Dott.ssa Marta Merlini -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -767,7 +819,6 @@
                 </div>
             </div>
 
-            <!-- 18. Dott. Andrea Midi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -787,7 +838,6 @@
                 </div>
             </div>
 
-            <!-- 19. Agnese Milani -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -807,7 +857,6 @@
                 </div>
             </div>
 
-            <!-- 20. Manuele Monti -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -827,7 +876,6 @@
                 </div>
             </div>
 
-            <!-- 21. Dott.ssa Debora Maria Riva -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -847,7 +895,6 @@
                 </div>
             </div>
 
-            <!-- 22. Dott.ssa Valeria Rocca -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -867,7 +914,6 @@
                 </div>
             </div>
 
-            <!-- 23. Giovanni Rota -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -887,7 +933,6 @@
                 </div>
             </div>
 
-            <!-- 24. Dott. Giovanni Vergottini -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -907,7 +952,6 @@
                 </div>
             </div>
 
-            <!-- 25. Équipe Neurochirurghi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -927,7 +971,6 @@
                 </div>
             </div>
 
-            <!-- 26. Erica Scerna -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
@@ -947,7 +990,6 @@
                 </div>
             </div>
 
-            <!-- 27. Valentina Botturi -->
             <div class="doctor-card bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-all">
                 <div class="p-6">
                     <div class="flex items-center gap-4 mb-2">
