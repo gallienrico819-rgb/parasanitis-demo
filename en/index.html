@@ -121,7 +121,6 @@
                 <a href="#about" class="hover:text-navy-900">About Us</a>
                 <a href="#blood-tests" class="text-red-600 font-bold hover:text-red-700 flex items-center gap-1"><i data-lucide="droplet" class="w-3.5 h-3.5"></i> Blood Tests</a>
                 <a href="#facility" class="hover:text-navy-900">The Clinic</a>
-                <!-- RESET SEARCH WHEN CLICKING SPECIALISTS -->
                 <a href="#specialists" onclick="resetDoctorSearch()" class="hover:text-navy-900">Specialists</a>
                 <a href="#partners" class="hover:text-navy-900">Partners</a>
                 <a href="#checkup" class="hover:text-navy-900">Check-Ups</a>
@@ -202,7 +201,7 @@
         </div>
     </section>
 
-    <!-- SECTION: ABOUT US -->
+    <!-- SECTION: ABOUT US (UPDATED WITH SIRONE & BULCIAGO) -->
     <section id="about" class="py-16 sm:py-20 px-6 max-w-7xl mx-auto border-t border-slate-200">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-5 relative">
@@ -228,10 +227,10 @@
                 
                 <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
                     <p>
-                        <strong>Parasanitis Medical Centre</strong> was established in Bulciago with a single goal: to provide the regional community with a state-of-the-art healthcare hub where specialist expertise meets genuine, compassionate patient care.
+                        <strong>Parasanitis Medical Centre</strong> was originally established in <strong>Sirone</strong> in a 100 sqm practice, driven by a passion for personal patient care. Thanks to the trust of our patients and the continuous growth of our team, the clinic expanded and relocated to <strong>Bulciago</strong> into a state-of-the-art medical hub spanning over <strong>400 sqm</strong>.
                     </p>
                     <p>
-                        We believe true health extends beyond the treatment of symptoms. That is why our facility brings together over 40 highly skilled specialists across every key branch of medicine — from pulmonology and orthopaedics to physical therapy, psychology, and diagnostic imaging.
+                        Today, our new facility brings together over 40 highly skilled specialists across every key branch of medicine — from pulmonology and orthopaedics to physical therapy, psychology, and diagnostic imaging.
                     </p>
                     <p>
                         What distinguishes Parasanitis is our <strong>seamless interdisciplinary teamwork</strong>. Complex medical cases are reviewed collaboratively by our experts, ensuring faster diagnosis, clearer answers, and precisely tailored treatment plans.
@@ -307,7 +306,7 @@
         </div>
     </section>
 
-    <!-- RUNNING NUMBERS STATS -->
+    <!-- RUNNING NUMBERS STATS (SERVICES UPDATED TO 31) -->
     <section class="py-10 sm:py-12 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <div class="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 text-center shadow-sm relative overflow-hidden group hover:border-medical-accent transition-all">
@@ -335,7 +334,7 @@
                     <i data-lucide="stethoscope" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                 </div>
                 <div class="font-heading text-3xl sm:text-5xl font-extrabold text-navy-900 mb-1 sm:mb-2">
-                    <span class="counter" data-target="25">0</span>
+                    <span class="counter" data-target="31">0</span>
                 </div>
                 <p class="text-[11px] sm:text-xs uppercase font-bold tracking-widest text-slate-500">Specialist Services</p>
             </div>
@@ -391,7 +390,7 @@
         </div>
     </section>
 
-    <!-- SECTION: OUR PARTNERS -->
+    <!-- SECTION: OUR PARTNERS (UPDATED CASTAGNA & AMPLIFON) -->
     <section id="partners" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto border-t border-slate-200">
         <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
             <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Local Excellence</span>
@@ -402,6 +401,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Ortopedia Castagna -->
             <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
@@ -410,21 +410,26 @@
                         </div>
                         <div>
                             <h3 class="font-heading text-xl font-bold text-navy-900">Ortopedia Castagna</h3>
-                            <span class="text-xs text-medical-accent font-semibold uppercase">Orthopaedic Braces & Aids</span>
+                            <span class="text-xs text-medical-accent font-semibold uppercase">Medical Devices & Orthopaedic Products</span>
                         </div>
                     </div>
                     <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        In partnership with Ortopedia Castagna, a renowned orthopaedic specialist in the province of Lecco, we provide essential orthopaedic equipment directly on site: <strong>custom braces, ankle and knee supports, compression hosiery</strong>, and specialised mobility solutions.
+                        In partnership with Ortopedia Castagna, a renowned orthopaedic specialist in the province of Lecco, we provide a wide range of <strong>medical devices and orthopaedic products</strong> directly on site: custom braces, ankle and knee supports, compression hosiery, and specialised mobility solutions.
                     </p>
                 </div>
-                <div class="pt-4 border-t border-slate-100 mt-4">
+                <div class="pt-4 border-t border-slate-100 mt-4 flex flex-wrap items-center justify-between gap-3">
                     <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-medical-accent transition-colors">
                         <span>Enquire at reception</span>
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
                     </a>
+                    <button onclick="alert('Orthopaedic products gallery coming soon!');" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                        <i data-lucide="camera" class="w-3.5 h-3.5 text-medical-accent"></i>
+                        <span>View Products</span>
+                    </button>
                 </div>
             </div>
 
+            <!-- Amplifon -->
             <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
                 <div>
                     <div class="flex items-center gap-4 mb-6 pb-4 border-b border-slate-100">
@@ -437,14 +442,18 @@
                         </div>
                     </div>
                     <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-                        In collaboration with Amplifon, we offer <strong>complimentary hearing assessments</strong> at our clinic or in the comfort of your home, alongside tailored hearing aid solutions to suit every need.
+                        In collaboration with Amplifon, we offer <strong>complimentary hearing assessments</strong> at our clinic or in the comfort of your home. We provide the complete range of <strong>hearing aids supplied by Amplifon</strong>, tailored to suit every requirement.
                     </p>
                 </div>
-                <div class="pt-4 border-t border-slate-100 mt-4">
+                <div class="pt-4 border-t border-slate-100 mt-4 flex flex-wrap items-center justify-between gap-3">
                     <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-red-600 transition-colors">
                         <span>Book free hearing test</span>
                         <i data-lucide="chevron-right" class="w-4 h-4"></i>
                     </a>
+                    <button onclick="alert('Hearing aids gallery coming soon!');" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+                        <i data-lucide="camera" class="w-3.5 h-3.5 text-red-600"></i>
+                        <span>View Hearing Aids</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1042,15 +1051,21 @@
         </div>
     </section>
 
-    <!-- CORPORATE WELFARE -->
+    <!-- CORPORATE WELFARE (UPDATED WITH "BUSINESS SERVICES" BUTTON) -->
     <section id="welfare" class="py-12 sm:py-16 px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
             <div class="lg:col-span-6">
                 <span class="text-xs font-bold uppercase tracking-widest text-medical-accent block mb-2">Employee Healthcare Solutions</span>
                 <h2 class="font-heading text-2xl sm:text-4xl font-bold text-navy-900 mb-4 sm:mb-6">Parasanitis Corporate Welfare</h2>
-                <p class="text-slate-600 text-xs sm:text-base leading-relaxed mb-4">
+                <p class="text-slate-600 text-xs sm:text-base leading-relaxed mb-6">
                     Utilise your employer corporate welfare credit to access specialist consultations, diagnostic imaging, and blood tests without upfront out-of-pocket costs.
                 </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-navy-900 hover:bg-navy-800 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md inline-flex items-center gap-2">
+                        <i data-lucide="briefcase" class="w-4 h-4 text-medical-light"></i>
+                        <span>Corporate Services</span>
+                    </a>
+                </div>
             </div>
             <div class="lg:col-span-6 bg-slate-50 p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-slate-200">
                 <h3 class="font-heading text-lg sm:text-xl font-bold text-navy-900 mb-3 sm:mb-4">Accepted Welfare Platforms</h3>
